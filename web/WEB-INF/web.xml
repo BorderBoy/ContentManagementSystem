@@ -4,9 +4,17 @@
         <servlet-name>CreateCustomerServlet</servlet-name>
         <servlet-class>scrumm.controllers.CreateCustomerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateBulidingServlet</servlet-name>
+        <servlet-class>scrumm.controllers.CreateBulidingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateCustomerServlet</servlet-name>
         <url-pattern>/CreateCustomerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateBulidingServlet</servlet-name>
+        <url-pattern>/CreateBulidingServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

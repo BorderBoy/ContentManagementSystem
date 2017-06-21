@@ -5,11 +5,29 @@
  */
 package scrumm.models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jonas
  */
-public class Device {
+public class Device implements Serializable {
+    
+    int id;
+
+    public Device(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+  
     
     
     

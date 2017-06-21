@@ -6,6 +6,7 @@
 package scrumm.controllers;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,19 +36,33 @@ public class CreateCustomerServlet extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            
+           
+            
+            try{
+                int num = Integer.parseInt(request.getParameter("plz"));
+                // is an integer!
+              
         
-             Customer customer = new Customer(request.getParameter("name"), request.getParameter("land"), request.getParameter("stadt"), Integer.parseInt(request.getParameter("plz")), request.getParameter("strasse"));
-             
-             customer.store();
-             
-             request.setAttribute(customerID, customer);
-             
-             
-             
-             
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.html");  
-            dispatcher.forward(request, response);  
+                Customer customer = new Customer(request.getParameter("vorname"), request.getParameter("nachname"), request.getParameter("bezeichnung"), request.getParameter("ort"), request.getParameter("adresse"), Integer.parseInt(request.getParameter("plz")), request.getParameter("telefonnummer"), request.getParameter("bemerkung"));
+
+                customer.store();
+
+                request.setAttribute(customerID, customer);
+
+
+
+
+               RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayCustomer.jsp");  
+
+               dispatcher.forward(request, response);  
+               
        
+            } catch (NumberFormatException e) {
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/createCustomer.html");  
+
+               dispatcher.forward(request, response);
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
