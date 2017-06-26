@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import scrumm.models.Building;
+import scrumm.models.Customer;
 
 /**
  *
@@ -43,6 +44,9 @@ public class CreateBulidingServlet extends HttpServlet {
                 
             Building building = new Building(request.getParameter("bezeichnung"),request.getParameter("adresse"),Integer.parseInt(request.getParameter("plz")),request.getParameter("ort"),request.getParameter("bemerkung"));
        
+            Customer.currentCustomer.addBuilding(building);
+            Customer.currentCustomer.update();
+            
             request.setAttribute(buildingID, building);
        
          

@@ -28,6 +28,8 @@ public class Building implements Serializable {
         this.plz = plz;
         this.ort = ort;
         this.bemerkung = bemerkung;
+        
+        ebenen = new ArrayList<Floor>();
     }
 
     public Building(ArrayList<Floor> ebenen, String bezeichnung, String adresse, int plz, String ort, String bemerkung) {

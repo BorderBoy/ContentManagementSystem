@@ -23,6 +23,8 @@ public class Room implements Serializable {
     public Room(String bezeichnung, String raumnummer) {
         this.bezeichnung = bezeichnung;
         this.raumnummer = raumnummer;
+        
+        geraete = new ArrayList<Device>();
     }
 
     public Room(String bezeichnung, String raumnummer, ArrayList<Device> geraete) {

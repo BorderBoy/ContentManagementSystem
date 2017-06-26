@@ -28,6 +28,8 @@ public class Floor implements Serializable{
     public Floor(String bezeichnung, String bemerkung) {
         this.bezeichnung = bezeichnung;
         this.bemerkung = bemerkung;
+        
+        raeume = new ArrayList<Room>();
     }
     
     public void addRoom(Room r){
