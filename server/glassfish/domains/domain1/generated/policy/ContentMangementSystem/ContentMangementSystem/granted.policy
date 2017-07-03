@@ -1,16 +1,17 @@
-/* AUTOMATICALLY GENERATED ON Mon Jun 26 19:31:55 CEST 2017*/
+/* AUTOMATICALLY GENERATED ON Mon Jul 03 19:57:28 CEST 2017*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.WebResourcePermission "/";
   permission javax.security.jacc.WebUserDataPermission "/";
+  permission javax.security.jacc.WebResourcePermission "/";
 };
 
 grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
   permission javax.security.jacc.WebRoleRefPermission "", "**";
-  permission javax.security.jacc.WebRoleRefPermission "CustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChooseCustomerServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "ChoosenCustomerServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "CustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateCustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBulidingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";

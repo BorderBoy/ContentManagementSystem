@@ -53,7 +53,6 @@ public class Customer implements Serializable {
         this.bemerkung = bemerkung;
         id = -1;
         
-        currentCustomer = this;
     }
 
     public Customer(String vorname, String nachname, String bezeichnung, String ort, String adresse, int plz, String telefonnummer, String bemerkung) {
@@ -69,8 +68,22 @@ public class Customer implements Serializable {
         
         gebaeude = new ArrayList<Building>();
         
-        currentCustomer = this;
     }
+
+    public Customer(String vorname, String nachname, String bezeichnung, String ort, String adresse, ArrayList<Building> gebaeude, int plz, String telefonnummer, String bemerkung, int id) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.bezeichnung = bezeichnung;
+        this.ort = ort;
+        this.adresse = adresse;
+        this.gebaeude = gebaeude;
+        this.plz = plz;
+        this.telefonnummer = telefonnummer;
+        this.bemerkung = bemerkung;
+        this.id = id;
+    }
+    
+    
     
   
     
@@ -255,6 +268,20 @@ public class Customer implements Serializable {
     public void setBemerkung(String bemerkung) {
         this.bemerkung = bemerkung;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public static void setCurrentCustomer(Customer c){
+        currentCustomer = c;
+    }
+    
+    
     
     
     public byte[] convertToBytes(ArrayList<Building> list) throws IOException{

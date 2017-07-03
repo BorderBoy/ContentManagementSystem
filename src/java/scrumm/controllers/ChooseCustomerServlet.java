@@ -5,8 +5,14 @@
  */
 package scrumm.controllers;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import scrumm.models.Building;
 import scrumm.models.Customer;
 
 /**
@@ -33,17 +40,46 @@ public class ChooseCustomerServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     private String customerListID = "customerListBean";
-    private ArrayList<String> customerList;
+    private ArrayList<String[]> customerList;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        customerList = new ArrayList<String>();
+        customerList = new ArrayList<String[]>();
         
-        customerList.add("hallo");
-        customerList.add("4554");
+        try {
+            Connection cn;
+            Statement st;
+            ResultSet rs;
+            
+            
+            Class.forName("org.sqlite.JDBC");
+            cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
+            st = cn.createStatement();  
+            
+            rs = st.executeQuery("SELECT * FROM kunde");
+            
+            
+            while(rs.next()){
+                //customerList.add(new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID")));
+                String[] array;
+                array = new String[2];
+                array[0] = rs.getInt("kundenID")+"";
+                array[1] = rs.getString("bezeichnung");
+                customerList.add(array);
+            }
+            
+            rs.close();
+            st.close();
+            cn.close();
+            
+            
+            
+        } catch (Exception e) {
+        }
         
         
+       
         
         request.setAttribute(customerListID, customerList);
         
@@ -90,5 +126,12 @@ public class ChooseCustomerServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    public ArrayList<Building> convertToArrayList(byte[] bytes) throws IOException, ClassNotFoundException{
+        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+        ObjectInputStream ois = new ObjectInputStream(bis);
+        
+        return (ArrayList<Building>) ois.readObject();
+    } //temporary: centralize!
 
 }

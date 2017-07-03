@@ -45,7 +45,7 @@ public class CreateCustomerServlet extends HttpServlet {
               
         
                 Customer customer = new Customer(request.getParameter("vorname"), request.getParameter("nachname"), request.getParameter("bezeichnung"), request.getParameter("ort"), request.getParameter("adresse"), Integer.parseInt(request.getParameter("plz")), request.getParameter("telefonnummer"), request.getParameter("bemerkung"));
-
+                Customer.setCurrentCustomer(customer);
                 customer.store();
 
                 request.setAttribute(customerID, customer);
