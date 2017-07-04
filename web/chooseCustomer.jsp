@@ -19,26 +19,30 @@
         <title>Kunden auswählen</title>
     </head>
     <body>
-        <%
-            //ArrayList<String> list = (ArrayList) session.getAttribute("customerListBean");
-
-            //ArrayList<String> list = new ArrayList<String>();
-            //out.println(list.getList().get(0));
-            //list is empty!!!
-            //liste übergeben aus chooscustomerservlet
-            
-        %>
-         
+       
        <form name="ChoosenCustomerForm" action="ChoosenCustomerServlet">
             <label>Kunden auswählen:<br>
-                <select name="customer" size="${customerListBean.size()}">
+                <script type="text/javascript">
+                    function SelectedValue(sel) {                            
+                        document.getElementById("submit").removeAttribute('disabled');
+                     }
+                     function DoubleClicked (){
+                         document.getElementById("submit").click();
+                     }
+                
+                </script>
+                
+                <select name="customer" size="${customerListBean.size()}"  ondblclick="DoubleClicked()" onclick ="SelectedValue(this)">
                 <c:forEach items="${customerListBean}" var="item">
                    <option value="${item[0]}">${item[0]}: ${item[1]}</option>
                 </c:forEach>
                  </select>
             </label>
-            <br><br><input type="submit" value="Auswählen" name="submit" />
-       </form>     
+                
+                <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
+            
+       </form>    
+           
        
         
     </body>

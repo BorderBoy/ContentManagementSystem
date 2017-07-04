@@ -79,31 +79,33 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        <title>Kunden auswählen</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        ");
-
-            //ArrayList<String> list = (ArrayList) session.getAttribute("customerListBean");
-
-            //ArrayList<String> list = new ArrayList<String>();
-            //out.println(list.getList().get(0));
-            //list is empty!!!
-            //liste übergeben aus chooscustomerservlet
-            
-        
-      out.write("\n");
-      out.write("         \n");
+      out.write("       \n");
       out.write("       <form name=\"ChoosenCustomerForm\" action=\"ChoosenCustomerServlet\">\n");
       out.write("            <label>Kunden auswählen:<br>\n");
+      out.write("                <script type=\"text/javascript\">\n");
+      out.write("                    function SelectedValue(sel) {                            \n");
+      out.write("                        document.getElementById(\"submit\").removeAttribute('disabled');\n");
+      out.write("                     }\n");
+      out.write("                     function DoubleClicked (){\n");
+      out.write("                         document.getElementById(\"submit\").click();\n");
+      out.write("                     }\n");
+      out.write("                \n");
+      out.write("                </script>\n");
+      out.write("                \n");
       out.write("                <select name=\"customer\" size=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customerListBean.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">\n");
+      out.write("\"  ondblclick=\"DoubleClicked()\" onclick =\"SelectedValue(this)\">\n");
       out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\n");
       out.write("                 </select>\n");
       out.write("            </label>\n");
-      out.write("            <br><br><input type=\"submit\" value=\"Auswählen\" name=\"submit\" />\n");
-      out.write("       </form>     \n");
+      out.write("                \n");
+      out.write("                <br><br><input disabled id=\"submit\" type=\"submit\" value=\"Auswählen\" name=\"submit\" />\n");
+      out.write("            \n");
+      out.write("       </form>    \n");
+      out.write("           \n");
       out.write("       \n");
       out.write("        \n");
       out.write("    </body>\n");

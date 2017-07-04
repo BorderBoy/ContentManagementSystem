@@ -4,10 +4,10 @@
     Author     : ninacordes
 --%>
 
+<%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<jsp:useBean id="customerBean" scope="request" class="scrumm.models.Customer" />
 
 <html>
     <head>
@@ -15,16 +15,22 @@
         <title>Kunde</title>
     </head>
     <body>
-        Sie haben sich mit folgendem Kunden angelegt: <br>
-        Bezeichnung: <jsp:getProperty name="customerBean" property="bezeichnung" /> <br>
-        Adresse:  <jsp:getProperty name="customerBean" property="adresse" /> <br>
-        PLZ:  <jsp:getProperty name="customerBean" property="plz" /> <br>
-        Ort: <jsp:getProperty name="customerBean" property="ort" /> <br>
-        Vorname:  <jsp:getProperty name="customerBean" property="vorname" /> <br>
-        Nachname: <jsp:getProperty name="customerBean" property="nachname" /> <br>
-        Telefon:  <jsp:getProperty name="customerBean" property="telefonnummer" /> <br>
-        Bemerkung: <jsp:getProperty name="customerBean" property="bemerkung" /> <br>
+        <%
+            Customer customer = Customer.currentCustomer;
+            request.setAttribute("customer", customer);
+        %>
+        Ausgewählter Kunde: <br>
+        Bezeichnung: ${customer.getBezeichnung()}<br>
+        Adresse: ${customer.getAdresse()}<br>
+        PLZ: ${customer.getPlz()}<br>
+        Ort: ${customer.getOrt()}<br>
+        Vorname: ${customer.getVorname()}<br>
+        Nachname: ${customer.getNachname()}<br>
+        Telefon: ${customer.getTelefonnummer()}<br>
+        Bemerkung: ${customer.getBemerkung()}<br>
         
-        <a href="createBuilding.html">Gebäude hinzufügen</a>
+        <a href="createBuilding.html">Gebäude hinzufügen</a><br>
+        <a href="chooseBuilding.jsp">Gebäude auswählen</a><br>
+        <a href="index.jsp">Zurück zum Hauptmenü</a>
     </body>
 </html>

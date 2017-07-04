@@ -57,7 +57,7 @@ public class ChooseCustomerServlet extends HttpServlet {
             cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
             st = cn.createStatement();  
             
-            rs = st.executeQuery("SELECT * FROM kunde");
+            rs = st.executeQuery("SELECT * FROM kunde ORDER BY bezeichnung desc");
             
             
             while(rs.next()){

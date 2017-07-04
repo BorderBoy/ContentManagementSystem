@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import scrumm.models.Customer;
 
 public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -45,22 +46,8 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
       out.write("\n");
-      scrumm.models.Customer customerBean = null;
-      synchronized (request) {
-        customerBean = (scrumm.models.Customer) _jspx_page_context.getAttribute("customerBean", PageContext.REQUEST_SCOPE);
-        if (customerBean == null){
-          try {
-            customerBean = (scrumm.models.Customer) java.beans.Beans.instantiate(this.getClass().getClassLoader(), "scrumm.models.Customer");
-          } catch (ClassNotFoundException exc) {
-            throw new InstantiationException(exc.getMessage());
-          } catch (Exception exc) {
-            throw new ServletException("Cannot create bean of class " + "scrumm.models.Customer", exc);
-          }
-          _jspx_page_context.setAttribute("customerBean", customerBean, PageContext.REQUEST_SCOPE);
-        }
-      }
+      out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -69,33 +56,41 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <title>Kunde</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        Sie haben sich mit folgendem Kunden angelegt: <br>\n");
+      out.write("        ");
+
+            Customer customer = Customer.currentCustomer;
+            request.setAttribute("customer", customer);
+        
+      out.write("\n");
+      out.write("        Ausgewählter Kunde: <br>\n");
       out.write("        Bezeichnung: ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getBezeichnung())));
-      out.write(" <br>\n");
-      out.write("        Adresse:  ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getAdresse())));
-      out.write(" <br>\n");
-      out.write("        PLZ:  ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getPlz())));
-      out.write(" <br>\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
+      out.write("        Adresse: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getAdresse()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
+      out.write("        PLZ: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getPlz()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
       out.write("        Ort: ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getOrt())));
-      out.write(" <br>\n");
-      out.write("        Vorname:  ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getVorname())));
-      out.write(" <br>\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getOrt()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
+      out.write("        Vorname: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getVorname()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
       out.write("        Nachname: ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getNachname())));
-      out.write(" <br>\n");
-      out.write("        Telefon:  ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getTelefonnummer())));
-      out.write(" <br>\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getNachname()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
+      out.write("        Telefon: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getTelefonnummer()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
       out.write("        Bemerkung: ");
-      out.write(org.apache.jasper.runtime.JspRuntimeLibrary.toString((((scrumm.models.Customer)_jspx_page_context.findAttribute("customerBean")).getBemerkung())));
-      out.write(" <br>\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("<br>\n");
       out.write("        \n");
-      out.write("        <a href=\"createBuilding.html\">Gebäude hinzufügen</a>\n");
+      out.write("        <a href=\"createBuilding.html\">Gebäude hinzufügen</a><br>\n");
+      out.write("        <a href=\"chooseBuilding.jsp\">Gebäude auswählen</a><br>\n");
+      out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

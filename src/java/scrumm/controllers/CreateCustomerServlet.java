@@ -31,7 +31,7 @@ public class CreateCustomerServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    private String customerID = "customerBean";
+    //private String customerID = "customerBean";
     
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -48,7 +48,7 @@ public class CreateCustomerServlet extends HttpServlet {
                 Customer.setCurrentCustomer(customer);
                 customer.store();
 
-                request.setAttribute(customerID, customer);
+                //request.setAttribute(customerID, customer);
 
 
 

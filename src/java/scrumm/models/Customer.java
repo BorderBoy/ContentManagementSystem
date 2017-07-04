@@ -37,6 +37,7 @@ public class Customer implements Serializable {
     private String telefonnummer;       
     private String bemerkung;
     private int id;
+    private Building currentBuilding;
     
     public static Customer currentCustomer;
     
@@ -96,7 +97,6 @@ public class Customer implements Serializable {
         //ResultSet rs;
         
         String currentDir = System.getProperty("user.dir");
-        System.out.println("Current dir using System:" +currentDir);
                 
         
         
@@ -280,6 +280,16 @@ public class Customer implements Serializable {
     public static void setCurrentCustomer(Customer c){
         currentCustomer = c;
     }
+
+    public Building getCurrentBuilding() {
+        return currentBuilding;
+    }
+
+    public void setCurrentBuilding(Building currentBuilding) {
+        this.currentBuilding = currentBuilding;
+    }
+    
+    
     
     
     

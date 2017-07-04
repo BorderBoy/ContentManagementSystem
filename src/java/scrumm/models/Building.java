@@ -14,13 +14,17 @@ import java.util.ArrayList;
  */
 public class Building implements Serializable {
     
-    ArrayList<Floor> ebenen;
-    int id;
-    String bezeichnung;
-    String adresse;
-    int plz;
-    String ort;
-    String bemerkung;
+    private ArrayList<Floor> ebenen;
+    private int id;
+    private String bezeichnung;
+    private String adresse;
+    private int plz;
+    private String ort;
+    private String bemerkung;
+    private Floor currentFloor;
+    
+
+    
 
     public Building(String bezeichnung, String adresse, int plz, String ort, String bemerkung) {
         this.bezeichnung = bezeichnung;
@@ -103,7 +107,14 @@ public class Building implements Serializable {
     public void setBemerkung(String bemerkung) {
         this.bemerkung = bemerkung;
     }
-    
-    
+
+    public Floor getCurrentFloor() {
+        return currentFloor;
+    }
+
+    public void setCurrentFloor(Floor currentFloor) {
+        this.currentFloor = currentFloor;
+    }
+
     
 }

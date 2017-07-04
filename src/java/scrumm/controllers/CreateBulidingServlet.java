@@ -33,7 +33,7 @@ public class CreateBulidingServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     
-    private final String buildingID = "buildingBean";
+    
     
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -45,13 +45,11 @@ public class CreateBulidingServlet extends HttpServlet {
             Building building = new Building(request.getParameter("bezeichnung"),request.getParameter("adresse"),Integer.parseInt(request.getParameter("plz")),request.getParameter("ort"),request.getParameter("bemerkung"));
        
             Customer.currentCustomer.addBuilding(building);
+            Customer.currentCustomer.setCurrentBuilding(building);
             Customer.currentCustomer.update();
             
-            request.setAttribute(buildingID, building);
-       
-         
-       
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.html");  
+            
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayBuilding.jsp");  
             dispatcher.forward(request, response);
             
             

@@ -40,7 +40,7 @@ public class ChoosenCustomerServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     
-    private final String customerBeanID = "customerBean";
+    //private final String customerBeanID = "customerBean";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -78,7 +78,7 @@ public class ChoosenCustomerServlet extends HttpServlet {
         } catch (Exception e) {
         }
         
-        request.setAttribute(customerBeanID, customer);
+        //request.setAttribute(customerBeanID, customer);
        
          
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayCustomer.jsp");  
