@@ -20,7 +20,7 @@ import scrumm.models.Customer;
  *
  * @author ninacordes
  */
-@WebServlet(name = "BuildingServlet", urlPatterns = {"/BuildingServlet"})
+@WebServlet(name = "CreateBuildingServlet", urlPatterns = {"/CreateBuildingServlet"})
 public class CreateBulidingServlet extends HttpServlet {
 
     /**

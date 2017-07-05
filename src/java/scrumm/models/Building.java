@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author ninacordes
  */
-public class Building implements Serializable {
+public class Building implements Serializable, Comparable {
     
     private ArrayList<Floor> ebenen;
     private int id;
@@ -114,6 +114,12 @@ public class Building implements Serializable {
 
     public void setCurrentFloor(Floor currentFloor) {
         this.currentFloor = currentFloor;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Building b = (Building) o;
+        return this.bezeichnung.compareTo(b.getBezeichnung());
     }
 
     

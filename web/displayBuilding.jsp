@@ -21,7 +21,7 @@
             Building building = Customer.currentCustomer.getCurrentBuilding();
             request.setAttribute("building", building);
         %>
-        Ausgewähltes Gebäude: <br>
+        Aktuelles Gebäude: <br>
         Bezeichnung: ${building.getBezeichnung()}<br>
         Adresse: ${building.getAdresse()}<br>
         PLZ: ${building.getPlz()}<br>

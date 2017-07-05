@@ -4,6 +4,7 @@
     Author     : Jonas
 --%>
 
+<%@page import="java.util.Collections"%>
 <%@page import="scrumm.models.Building"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="scrumm.models.Customer"%>
@@ -18,6 +19,7 @@
     <body>
         <%
             ArrayList<Building> buildingList = Customer.currentCustomer.getGebaeude();
+            Collections.sort(buildingList);
             request.setAttribute("buildingList", buildingList);
         %>
         

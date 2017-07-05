@@ -14,10 +14,12 @@ import java.util.ArrayList;
  */
 public class Floor implements Serializable{
     
-    int id;
-    String bezeichnung;
-    String bemerkung;
-    ArrayList<Room> raeume;
+    private int id;
+    private String bezeichnung;
+    private String bemerkung;
+    private ArrayList<Room> raeume;
+    private Room currentRoom;
+    
 
     public Floor(String bezeichnung, String bemerkung, ArrayList<Room> raeume) {
         this.bezeichnung = bezeichnung;
@@ -68,6 +70,14 @@ public class Floor implements Serializable{
         this.raeume = raeume;
     }
 
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
+    
     
     
 }
