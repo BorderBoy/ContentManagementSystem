@@ -17,7 +17,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Raum auswählen</title>
     </head>
-    <body>
+    <body onload="initialize()">
         <%
             ArrayList<Room> roomList = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume();
             request.setAttribute("roomList", roomList);
@@ -30,12 +30,22 @@
                         document.getElementById("submit").removeAttribute('disabled');
                     }
                     function DoubleClicked (){
-                         document.getElementById("submit").click();
+                        document.getElementById("submit").click();
                     }
-                
+                    function initialize(){
+                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("roomList"); 
+                        int size = list.size(); %>
+                        var sizee = "<%= size%>";
+                        if(sizee!=0){
+                            document.getElementById("list").removeAttribute('disabled');
+                            document.getElementById("list").removeAttribute('hidden');
+                        } else {
+                            document.write("nix Raum"); 
+                        }
+                    }
                 </script>
                
-                <select name="room" size="${roomList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
+                <select id="list" disabled="true" hidden="true" name="room" size="${roomList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
                 <c:forEach items="${roomList}" var="item" varStatus="theCount">
                    <option value="${theCount.index}">${item.getBezeichnung()}</option>
                 </c:forEach>

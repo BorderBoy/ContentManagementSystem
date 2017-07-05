@@ -62,14 +62,15 @@ public final class displayRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
             request.setAttribute("room", room);
         
       out.write("\n");
-      out.write("        Aktueller Raum: <br>\n");
+      out.write("        <font size=\"20\">Ausgewählter Raum: </font><br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
       out.write("        Raumnummer: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getRaumnummer()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
-      out.write("        <a href=\"createDevice.html\">Gerät hinzufügen</a><br>\n");
+      out.write("        <a href=\"createDevice.jsp\">Gerät hinzufügen</a><br>\n");
+      out.write("        <a href=\"chooseDevice.jsp\">Gerät auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");
       out.write("        <a href=\"displayBuilding.jsp\">Gebäude anzeigen</a><br>\n");
       out.write("        <a href=\"displayFloor.jsp\">Ebene anzeigen</a><br>\n");

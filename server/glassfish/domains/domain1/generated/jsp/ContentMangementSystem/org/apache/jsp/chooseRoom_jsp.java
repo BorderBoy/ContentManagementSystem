@@ -72,7 +72,7 @@ public final class chooseRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Raum auswählen</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body onload=\"initialize()\">\n");
       out.write("        ");
 
             ArrayList<Room> roomList = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume();
@@ -87,12 +87,26 @@ public final class chooseRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        document.getElementById(\"submit\").removeAttribute('disabled');\n");
       out.write("                    }\n");
       out.write("                    function DoubleClicked (){\n");
-      out.write("                         document.getElementById(\"submit\").click();\n");
+      out.write("                        document.getElementById(\"submit\").click();\n");
       out.write("                    }\n");
-      out.write("                \n");
+      out.write("                    function initialize(){\n");
+      out.write("                        ");
+ ArrayList<String> list = (ArrayList<String>) request.getAttribute("roomList"); 
+                        int size = list.size(); 
+      out.write("\n");
+      out.write("                        var sizee = \"");
+      out.print( size);
+      out.write("\";\n");
+      out.write("                        if(sizee!=0){\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('disabled');\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('hidden');\n");
+      out.write("                        } else {\n");
+      out.write("                            document.write(\"nix Raum\"); \n");
+      out.write("                        }\n");
+      out.write("                    }\n");
       out.write("                </script>\n");
       out.write("               \n");
-      out.write("                <select name=\"room\" size=\"");
+      out.write("                <select id=\"list\" disabled=\"true\" hidden=\"true\" name=\"room\" size=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${roomList.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" ondblclick=\"DoubleClicked()\" onclick=\"SelectedValue(this)\">\n");
       out.write("                ");

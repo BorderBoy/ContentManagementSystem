@@ -3,11 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import scrumm.models.Floor;
-import scrumm.models.Building;
-import scrumm.models.Customer;
 
-public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class createCustomer_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,37 +45,43 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
-      out.write("\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Ebene anzeigen</title>\n");
+      out.write("        \n");
+      out.write("        <title>Kunde anlegen</title>\n");
+      out.write("        \n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("       ");
-
-            Floor floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
-            request.setAttribute("floor", floor);
-        
-      out.write("\n");
-      out.write("        Ausgewählte Ebene: <br>\n");
-      out.write("        Bezeichnung: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("<br>\n");
-      out.write("        Bemerkung: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("<br>\n");
-      out.write("        <a href=\"createRoom.jsp\">Raum hinzufügen</a><br>\n");
-      out.write("        <a href=\"chooseRoom.jsp\">Raum auswählen</a><br>\n");
-      out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");
-      out.write("        <a href=\"displayBuilding.jsp\">Gebäude anzeigen</a><br>\n");
-      out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a> \n");
-      out.write("        \n");
+      out.write("         <script type=\"text/javascript\">\n");
+      out.write("             function check() {\n");
+      out.write("                var plz = document.getElementById(\"plz\").value;\n");
+      out.write("                if(!isNaN(plz)) {\n");
+      out.write("                    var bez = document.getElementById(\"bez\").value;\n");
+      out.write("                    if(bez !== \"\"){\n");
+      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                    } else {\n");
+      out.write("                        alert(\"ey bezeichnung\");\n");
+      out.write("                    }\n");
+      out.write("                } else {\n");
+      out.write("                    alert(\"plz nummer!\");\n");
+      out.write("                }\n");
+      out.write("                 \n");
+      out.write("             }\n");
+      out.write("         \n");
+      out.write("         </script>\n");
+      out.write("        <form id=\"form\" name=\"CreateCustomerForm\" action=\"CreateCustomerServlet\">\n");
+      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"Uaschluch\" /><br>\n");
+      out.write("            Adresse: <input type=\"text\" name=\"adresse\" value=\"Disney Land\" /><br>\n");
+      out.write("            PLZ: <input id=\"plz\" type=\"text\" name=\"plz\" value=\"666\" /><br>\n");
+      out.write("            Ort: <input type=\"text\" name=\"ort\" value=\"a\" /><br>\n");
+      out.write("            Vorname: <input type=\"text\" name=\"vorname\" value=\"eooj j\" /><br>\n");
+      out.write("            Nachname: <input type=\"text\" name=\"nachname\" value=\"eooj j\" /><br>\n");
+      out.write("            Telefon: <input type=\"text\" name=\"telefonnummer\" value=\"eooj j\" /><br>\n");
+      out.write("            Bemerkung: <input type=\"text\" name=\"bemerkung\" value=\"eooj j\" /><br>\n");
+      out.write("            <input type=\"button\" value=\"Fertig\" name=\"submitButton\" onclick=\"check()\"/>\n");
+      out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

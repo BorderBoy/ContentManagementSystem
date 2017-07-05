@@ -15,11 +15,12 @@ import java.util.logging.Logger;
  */
 public class Room implements Serializable {
     
-    int id;
-    String bezeichnung;
-    String raumnummer;
-    ArrayList<Device> geraete;
-
+    private int id;
+    private String bezeichnung;
+    private String raumnummer;
+    private ArrayList<Device> geraete;
+    private Device currentDevice;
+    
     public Room(String bezeichnung, String raumnummer) {
         this.bezeichnung = bezeichnung;
         this.raumnummer = raumnummer;
@@ -67,6 +68,14 @@ public class Room implements Serializable {
 
     public void setGeraete(ArrayList<Device> geraete) {
         this.geraete = geraete;
+    }
+
+    public Device getCurrentDevice() {
+        return currentDevice;
+    }
+
+    public void setCurrentDevice(Device currentDevice) {
+        this.currentDevice = currentDevice;
     }
    
     

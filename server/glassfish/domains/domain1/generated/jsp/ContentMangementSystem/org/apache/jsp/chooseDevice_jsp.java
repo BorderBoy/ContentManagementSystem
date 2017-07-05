@@ -3,12 +3,14 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.util.Collections;
+import scrumm.models.Device;
+import scrumm.models.Room;
+import scrumm.models.Floor;
 import scrumm.models.Building;
 import java.util.ArrayList;
 import scrumm.models.Customer;
 
-public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class chooseDevice_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -60,27 +62,28 @@ public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DO<DOCTYPE html>\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Gebäude auswählen</title>\n");
+      out.write("        <title>Gerät auswählen</title>\n");
       out.write("    </head>\n");
       out.write("    <body onload=\"initialize()\">\n");
       out.write("        ");
 
-            ArrayList<Building> buildingList = Customer.currentCustomer.getGebaeude();
-            Collections.sort(buildingList);
-            request.setAttribute("buildingList", buildingList);
+            ArrayList<Device> deviceList = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getGeraete();
+            request.setAttribute("deviceList", deviceList);
         
       out.write("\n");
       out.write("        \n");
-      out.write("        <form name=\"ChoosenBuildingForm\" action=\"ChoosenBuildingServlet\">\n");
-      out.write("            <label>Gebäude auswählen:<br>\n");
+      out.write("        <form name=\"ChoosenDeviceForm\" action=\"ChoosenDeviceServlet\">\n");
+      out.write("            <label>Gerät auswählen:<br>\n");
       out.write("                <script type=\"text/javascript\">\n");
       out.write("                    function SelectedValue(sel) {                            \n");
       out.write("                        document.getElementById(\"submit\").removeAttribute('disabled');\n");
@@ -90,7 +93,7 @@ public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                    }\n");
       out.write("                    function initialize(){\n");
       out.write("                        ");
- ArrayList<String> list = (ArrayList<String>) request.getAttribute("buildingList"); 
+ ArrayList<String> list = (ArrayList<String>) request.getAttribute("deviceList"); 
                         int size = list.size(); 
       out.write("\n");
       out.write("                        var sizee = \"");
@@ -100,14 +103,14 @@ public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                            document.getElementById(\"list\").removeAttribute('disabled');\n");
       out.write("                            document.getElementById(\"list\").removeAttribute('hidden');\n");
       out.write("                        } else {\n");
-      out.write("                            document.write(\"nix Gebäude\"); \n");
+      out.write("                            document.write(\"nix Gerät\"); \n");
       out.write("                        }\n");
       out.write("                    }\n");
       out.write("                \n");
       out.write("                </script>\n");
       out.write("               \n");
-      out.write("                <select id=\"list\" disabled=\"true\" hidden=\"true\" name=\"building\" size=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${buildingList.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("                <select  id=\"list\" disabled=\"true\" hidden=\"true\" name=\"device\" size=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${deviceList.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" ondblclick=\"DoubleClicked()\" onclick=\"SelectedValue(this)\">\n");
       out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
@@ -142,7 +145,7 @@ public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_varStatus_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${buildingList}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${deviceList}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("item");
     _jspx_th_c_forEach_0.setVarStatus("theCount");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };

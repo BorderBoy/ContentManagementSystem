@@ -3,10 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import scrumm.models.Building;
-import scrumm.models.Customer;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class createRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -47,33 +45,31 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<!DOCTYPE html>\n");
-      out.write("<!--\n");
-      out.write("To change this license header, choose License Headers in Project Properties.\n");
-      out.write("To change this template file, choose Tools | Templates\n");
-      out.write("and open the template in the editor.\n");
-      out.write("-->\n");
-      out.write("\n");
-      out.write("\n");
       out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <title>Content Management System</title>\n");
-      out.write("        <meta charset=\"UTF-8\">\n");
-      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("   <head>\n");
+      out.write("        <title>Raum erstellen</title>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">       \n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        ");
-
-            Customer.setCurrentCustomer(null);
-        
-      out.write("\n");
-      out.write("        <a href=\"createCustomer.jsp\">Neuen Kunden anlegen</a> <br>\n");
-      out.write("       <a href=\"chooseCustomer.jsp\">Kunden auswählen</a>\n");
+      out.write("         <script type=\"text/javascript\">\n");
+      out.write("            function check() {\n");
+      out.write("                var bez = document.getElementById(\"bez\").value;\n");
+      out.write("                var raumnr = document.getElementById(\"raumnr\").value;\n");
+      out.write("                if(bez !== \"\" || raumnr !==\"\"){\n");
+      out.write("                    document.getElementById(\"form\").submit();\n");
+      out.write("                } else {\n");
+      out.write("                    alert(\"ey bezeichnung oder nummer\");\n");
+      out.write("                }\n");
+      out.write("            }\n");
+      out.write("         </script>\n");
+      out.write("        <form id=\"form\" name=\"CreateRoomForm\" action=\"CreateRoomServlet\"> \n");
+      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"Raum\" /><br>\n");
+      out.write("            Raumnummer: <input type=\"text\" name=\"raumnummer\" value=\"684648.684694\" id=\"raumnr\" /><br>\n");
+      out.write("            <input type=\"button\" value=\"Fertig\" name=\"submitButton\" onclick=\"check()\" /><br>\n");
+      out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
-      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

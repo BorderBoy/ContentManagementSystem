@@ -7,14 +7,17 @@ and open the template in the editor.
 
 <html>
     <head>
-        <title>Raum Erstellen</title>
+        <title>Gerät erstellen</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     </head>
     <body>
-        <form name="CreateRoomForm" action="CreateRoomServlet"> 
-            Bezeichnung: <input type="text" name="bezeichnung" value="Raum" /><br>
-            Raumnummer: <input type="text" name="raumnummer" value="684648.684694" /><br>
+        <form name="CreateDeviceForm" action="CreateDeviceServlet"> 
+            Bezeichnung: <input type="text" name="bezeichnung" value="geräääät" /><br>
+            ID: <input type="text" name="id" value="1209" /><br>
+            Klasse: <br>
+            <input type="radio" name="klasse" value="1" checked /> 1 <br>
+            <input type="radio" name="klasse" value="2" /> 2 <br>
             <input type="submit" value="Fertig" name="submitButton" /><br>
         </form>
     </body>

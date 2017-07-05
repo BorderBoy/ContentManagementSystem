@@ -1,4 +1,4 @@
-/* AUTOMATICALLY GENERATED ON Wed Jul 05 02:20:06 CEST 2017*/
+/* AUTOMATICALLY GENERATED ON Wed Jul 05 05:34:18 CEST 2017*/
 /* DO NOT EDIT */
 
 grant {
@@ -9,7 +9,6 @@ grant {
 grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenCustomerServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "ChooseCustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateRoomServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBulidingServlet", "**";
@@ -17,6 +16,8 @@ grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "default", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBuildingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "CreateDeviceServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "ChoosenDeviceServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateCustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenRoomServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenFloorServlet", "**";

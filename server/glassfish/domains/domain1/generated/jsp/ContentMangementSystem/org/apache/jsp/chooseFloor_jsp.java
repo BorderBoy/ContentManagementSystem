@@ -70,7 +70,7 @@ public final class chooseFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Ebene auswählen</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body onload=\"initialize()\">\n");
       out.write("        ");
 
             ArrayList<Floor> floorList = Customer.currentCustomer.getCurrentBuilding().getEbenen();
@@ -87,10 +87,24 @@ public final class chooseFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    function DoubleClicked (){\n");
       out.write("                         document.getElementById(\"submit\").click();\n");
       out.write("                    }\n");
-      out.write("                \n");
+      out.write("                    function initialize(){\n");
+      out.write("                        ");
+ ArrayList<String> list = (ArrayList<String>) request.getAttribute("floorList"); 
+                        int size = list.size(); 
+      out.write("\n");
+      out.write("                        var sizee = \"");
+      out.print( size);
+      out.write("\";\n");
+      out.write("                        if(sizee!=0){\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('disabled');\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('hidden');\n");
+      out.write("                        } else {\n");
+      out.write("                            document.write(\"nix Ebene\"); \n");
+      out.write("                        }\n");
+      out.write("                    }\n");
       out.write("                </script>\n");
       out.write("               \n");
-      out.write("                <select name=\"floor\" size=\"");
+      out.write("                <select id=\"list\" disabled=\"true\" hidden=\"true\" name=\"floor\" size=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floorList.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" ondblclick=\"DoubleClicked()\" onclick=\"SelectedValue(this)\">\n");
       out.write("                ");

@@ -13,10 +13,14 @@ import java.io.Serializable;
  */
 public class Device implements Serializable {
     
-    int id;
+     private int id;
+     private String bezeichnung;
+     private int klasse;
 
-    public Device(int id) {
+    public Device(int id, String bezeichnung, int klasse) {
         this.id = id;
+        this.bezeichnung = bezeichnung;
+        this.klasse = klasse;
     }
 
     public int getId() {
@@ -27,8 +31,21 @@ public class Device implements Serializable {
         this.id = id;
     }
 
-  
-    
+    public String getBezeichnung() {
+        return bezeichnung;
+    }
+
+    public void setBezeichnung(String bezeichnung) {
+        this.bezeichnung = bezeichnung;
+    }
+
+    public int getKlasse() {
+        return klasse;
+    }
+
+    public void setKlasse(int klasse) {
+        this.klasse = klasse;
+    }
     
     
 }

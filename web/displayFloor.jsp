@@ -21,10 +21,10 @@
             Floor floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
             request.setAttribute("floor", floor);
         %>
-        Aktuelle Ebene: <br>
+        Ausgewählte Ebene: <br>
         Bezeichnung: ${floor.getBezeichnung()}<br>
         Bemerkung: ${floor.getBemerkung()}<br>
-        <a href="createRoom.html">Raum hinzufügen</a><br>
+        <a href="createRoom.jsp">Raum hinzufügen</a><br>
         <a href="chooseRoom.jsp">Raum auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>
         <a href="displayBuilding.jsp">Gebäude anzeigen</a><br>

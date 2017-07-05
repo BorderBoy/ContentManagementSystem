@@ -16,7 +16,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ebene auswählen</title>
     </head>
-    <body>
+    <body onload="initialize()">
         <%
             ArrayList<Floor> floorList = Customer.currentCustomer.getCurrentBuilding().getEbenen();
             request.setAttribute("floorList", floorList);
@@ -31,10 +31,20 @@
                     function DoubleClicked (){
                          document.getElementById("submit").click();
                     }
-                
+                    function initialize(){
+                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("floorList"); 
+                        int size = list.size(); %>
+                        var sizee = "<%= size%>";
+                        if(sizee!=0){
+                            document.getElementById("list").removeAttribute('disabled');
+                            document.getElementById("list").removeAttribute('hidden');
+                        } else {
+                            document.write("nix Ebene"); 
+                        }
+                    }
                 </script>
                
-                <select name="floor" size="${floorList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
+                <select id="list" disabled="true" hidden="true" name="floor" size="${floorList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
                 <c:forEach items="${floorList}" var="item" varStatus="theCount">
                    <option value="${theCount.index}">${item.getBezeichnung()}</option>
                 </c:forEach>

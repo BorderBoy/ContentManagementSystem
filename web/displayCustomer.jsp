@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Kunde</title>
+        <title>Kunde anzeigen</title>
     </head>
     <body>
         <%
@@ -29,7 +29,7 @@
         Telefon: ${customer.getTelefonnummer()}<br>
         Bemerkung: ${customer.getBemerkung()}<br>
         
-        <a href="createBuilding.html">Gebäude hinzufügen</a><br>
+        <a href="createBuilding.jsp">Gebäude hinzufügen</a><br>
         <a href="chooseBuilding.jsp">Gebäude auswählen</a><br>
         <a href="index.jsp">Zurück zum Hauptmenü</a>
     </body>

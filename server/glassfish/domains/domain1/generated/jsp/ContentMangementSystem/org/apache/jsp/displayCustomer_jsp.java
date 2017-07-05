@@ -53,7 +53,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Kunde</title>\n");
+      out.write("        <title>Kunde anzeigen</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        ");
@@ -88,7 +88,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
       out.write("        \n");
-      out.write("        <a href=\"createBuilding.html\">Gebäude hinzufügen</a><br>\n");
+      out.write("        <a href=\"createBuilding.jsp\">Gebäude hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseBuilding.jsp\">Gebäude auswählen</a><br>\n");
       out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a>\n");
       out.write("    </body>\n");

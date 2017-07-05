@@ -3,6 +3,10 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,16 +65,11 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
       out.write("\n");
-      java.util.ArrayList customerListBean = null;
-      synchronized (request) {
-        customerListBean = (java.util.ArrayList) _jspx_page_context.getAttribute("customerListBean", PageContext.REQUEST_SCOPE);
-        if (customerListBean == null){
-          customerListBean = new java.util.ArrayList();
-          _jspx_page_context.setAttribute("customerListBean", customerListBean, PageContext.REQUEST_SCOPE);
-        }
-      }
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -78,8 +77,49 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Kunden auswählen</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body onload=\"initialize()\">\n");
+      out.write("        \n");
+      out.write("        ");
+ 
+            
+            ArrayList<String[]> customerList = new ArrayList<String[]>();
+
+            try {
+                Connection cn;
+                Statement st;
+                ResultSet rs;
+
+
+                Class.forName("org.sqlite.JDBC");
+                cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
+                st = cn.createStatement();  
+
+                rs = st.executeQuery("SELECT * FROM kunde ORDER BY bezeichnung desc");
+
+
+                while(rs.next()){
+                    //customerList.add(new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID")));
+                    String[] array;
+                    array = new String[2];
+                    array[0] = rs.getInt("kundenID")+"";
+                    array[1] = rs.getString("bezeichnung");
+                    customerList.add(array);
+                }
+
+                rs.close();
+                st.close();
+                cn.close();
+
+
+
+            } catch (Exception e) {
+            }   
+            
+            request.setAttribute("customerList",customerList);
+        
+      out.write("\n");
       out.write("       \n");
+      out.write("        \n");
       out.write("       <form name=\"ChoosenCustomerForm\" action=\"ChoosenCustomerServlet\">\n");
       out.write("            <label>Kunden auswählen:<br>\n");
       out.write("                <script type=\"text/javascript\">\n");
@@ -89,11 +129,26 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                     function DoubleClicked (){\n");
       out.write("                         document.getElementById(\"submit\").click();\n");
       out.write("                     }\n");
-      out.write("                \n");
+      out.write("                    function initialize(){\n");
+      out.write("                        ");
+ ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList"); 
+                        int size = list.size(); 
+      out.write("\n");
+      out.write("                        var sizee = \"");
+      out.print( size);
+      out.write("\";\n");
+      out.write("                        if(sizee!=0){\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('disabled');\n");
+      out.write("                            document.getElementById(\"list\").removeAttribute('hidden');\n");
+      out.write("                        } else {\n");
+      out.write("                            document.write(\"nix Kunde\"); \n");
+      out.write("                        }\n");
+      out.write("                    }\n");
       out.write("                </script>\n");
       out.write("                \n");
-      out.write("                <select name=\"customer\" size=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customerListBean.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("                \n");
+      out.write("                <select id=\"list\" name=\"customer\" disabled=\"true\" hidden=\"true\" size=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customerList.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"  ondblclick=\"DoubleClicked()\" onclick =\"SelectedValue(this)\">\n");
       out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
@@ -131,7 +186,7 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customerListBean}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customerList}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("item");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {

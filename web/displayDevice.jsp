@@ -1,9 +1,10 @@
 <%-- 
-    Document   : displayRoom
-    Created on : 05.07.2017, 01:47:34
+    Document   : displayDevice
+    Created on : 05.07.2017, 03:01:21
     Author     : Uli
 --%>
 
+<%@page import="scrumm.models.Device"%>
 <%@page import="scrumm.models.Room"%>
 <%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,21 +12,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Raum anzeigen</title>
+        <title>Gerät anzeigen</title>
     </head>
     <body>
         <%
-            Room room = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom();
-            request.setAttribute("room", room);
+            Device device = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getCurrentDevice();
+            request.setAttribute("device", device);
         %>
-        <font size="20">Ausgewählter Raum: </font><br>
-        Bezeichnung: ${room.getBezeichnung()}<br>
-        Raumnummer: ${room.getRaumnummer()}<br>
-        <a href="createDevice.jsp">Gerät hinzufügen</a><br>
-        <a href="chooseDevice.jsp">Gerät auswählen</a><br>
+        Ausgewähltes Gerät: <br>
+        Bezeichnung: ${device.getBezeichnung()}<br>
+        ID: ${device.getId()}<br>
+        Klasse: ${device.getKlasse()}<br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>
         <a href="displayBuilding.jsp">Gebäude anzeigen</a><br>
         <a href="displayFloor.jsp">Ebene anzeigen</a><br>
+        <a href="displayRoom.jsp">Raum anzeigen</a><br>
         <a href="index.jsp">Zurück zum Hauptmenü</a>
     </body>
 </html>

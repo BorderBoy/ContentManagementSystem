@@ -14,20 +14,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Gebäude</title>
+        <title>Gebäude anzeigen</title>
     </head>
     <body>
         <%
             Building building = Customer.currentCustomer.getCurrentBuilding();
             request.setAttribute("building", building);
         %>
-        Aktuelles Gebäude: <br>
+        Ausgewähltes Gebäude: <br>
         Bezeichnung: ${building.getBezeichnung()}<br>
         Adresse: ${building.getAdresse()}<br>
         PLZ: ${building.getPlz()}<br>
         Ort: ${building.getOrt()}<br>
         Bemerkung: ${building.getBemerkung()}<br>
-        <a href="createFloor.html">Ebene hinzufügen</a><br>
+        <a href="createFloor.jsp">Ebene hinzufügen</a><br>
         <a href="chooseFloor.jsp">Ebene auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>
         <a href="index.jsp">Zurück zum Hauptmenü</a>

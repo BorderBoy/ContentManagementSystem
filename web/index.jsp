@@ -24,12 +24,9 @@ and open the template in the editor.
     <body>
         <%
             Customer.setCurrentCustomer(null);
-            
         %>
-        <a href="createCustomer.html">Neuen Kunden anlegen</a>
-        <form name="ChooseCustomerForm" action="ChooseCustomerServlet"><br>
-            <input type="submit" value="Kunden auswählen" name="submitButton" />
-        </form>
+        <a href="createCustomer.jsp">Neuen Kunden anlegen</a> <br>
+       <a href="chooseCustomer.jsp">Kunden auswählen</a>
     </body>
 </html>
 

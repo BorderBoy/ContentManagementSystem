@@ -56,7 +56,7 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Gebäude</title>\n");
+      out.write("        <title>Gebäude anzeigen</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        ");
@@ -65,7 +65,7 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
             request.setAttribute("building", building);
         
       out.write("\n");
-      out.write("        Aktuelles Gebäude: <br>\n");
+      out.write("        Ausgewähltes Gebäude: <br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${building.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
@@ -81,7 +81,7 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        Bemerkung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${building.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
-      out.write("        <a href=\"createFloor.html\">Ebene hinzufügen</a><br>\n");
+      out.write("        <a href=\"createFloor.jsp\">Ebene hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseFloor.jsp\">Ebene auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");
       out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a>\n");
