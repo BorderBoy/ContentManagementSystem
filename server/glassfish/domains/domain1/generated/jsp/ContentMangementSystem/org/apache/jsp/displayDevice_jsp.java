@@ -64,6 +64,16 @@ public final class displayDevice_jsp extends org.apache.jasper.runtime.HttpJspBa
             request.setAttribute("device", device);
         
       out.write("\n");
+      out.write("        \n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("                function confirmation(){\n");
+      out.write("                    if(confirm(\"safe?\")){\n");
+      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                    }                     \n");
+      out.write("                    \n");
+      out.write("                }\n");
+      out.write("        </script>\n");
+      out.write("        \n");
       out.write("        Ausgewähltes Gerät: <br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${device.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -74,6 +84,9 @@ public final class displayDevice_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("        Klasse: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${device.getKlasse()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
+      out.write("        <form id=\"form\" name=\"DeleteDeviceForm\" action=\"DeleteDeviceServlet\">\n");
+      out.write("            <input type=\"button\" value=\"Gerät löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");
       out.write("        <a href=\"displayBuilding.jsp\">Gebäude anzeigen</a><br>\n");
       out.write("        <a href=\"displayFloor.jsp\">Ebene anzeigen</a><br>\n");

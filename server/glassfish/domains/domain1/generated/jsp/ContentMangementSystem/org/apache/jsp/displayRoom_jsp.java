@@ -62,6 +62,13 @@ public final class displayRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
             request.setAttribute("room", room);
         
       out.write("\n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("                function confirmation(){\n");
+      out.write("                    if(confirm(\"safe?\")){\n");
+      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                    } \n");
+      out.write("                }\n");
+      out.write("        </script>\n");
       out.write("        <font size=\"20\">Ausgewählter Raum: </font><br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -69,6 +76,9 @@ public final class displayRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        Raumnummer: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getRaumnummer()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
+      out.write("        <form id=\"form\" name=\"DeleteRoomForm\" action=\"DeleteRoomServlet\">\n");
+      out.write("            <input type=\"button\" value=\"Raum löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <a href=\"createDevice.jsp\">Gerät hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseDevice.jsp\">Gerät auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

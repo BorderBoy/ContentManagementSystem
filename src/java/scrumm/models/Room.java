@@ -37,6 +37,10 @@ public class Room implements Serializable {
     public void addDevice(Device d){
         geraete.add(d);
     }
+    
+    public void removeCurrentDevice(){
+        geraete.remove(currentDevice);
+    }
 
     public int getId() {
         return id;

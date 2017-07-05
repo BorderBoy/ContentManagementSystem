@@ -462,9 +462,9 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
-    <application context-root="/ContentManagementSystem" object-type="user" name="ContentMangementSystem" directory-deployed="true" location="file:/C:/Users/Uli/Desktop/Engineering/Projects/ContentManagementSystem/build/web/">
+    <application context-root="/ContentManagementSystem" object-type="user" name="ContentMangementSystem" directory-deployed="true" location="file:/C:/Users/Jonas/Desktop/Code/cms/ContentManagementSystem/build/web/">
       <property name="archiveType" value="war"></property>
-      <property name="appLocation" value="file:/C:/Users/Uli/Desktop/Engineering/Projects/ContentManagementSystem/build/web/"></property>
+      <property name="appLocation" value="file:/C:/Users/Jonas/Desktop/Code/cms/ContentManagementSystem/build/web/"></property>
       <property name="defaultAppName" value="web"></property>
       <property name="keepSessions" value="true"></property>
       <module name="ContentMangementSystem">

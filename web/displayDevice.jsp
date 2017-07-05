@@ -19,10 +19,23 @@
             Device device = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getCurrentDevice();
             request.setAttribute("device", device);
         %>
+        
+        <script type="text/javascript">
+                function confirmation(){
+                    if(confirm("safe?")){
+                        document.getElementById("form").submit();
+                    }                     
+                    
+                }
+        </script>
+        
         Ausgewähltes Gerät: <br>
         Bezeichnung: ${device.getBezeichnung()}<br>
         ID: ${device.getId()}<br>
         Klasse: ${device.getKlasse()}<br>
+        <form id="form" name="DeleteDeviceForm" action="DeleteDeviceServlet">
+            <input type="button" value="Gerät löschen" name="delete" onclick="confirmation()"/><br>
+        </form>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>
         <a href="displayBuilding.jsp">Gebäude anzeigen</a><br>
         <a href="displayFloor.jsp">Ebene anzeigen</a><br>

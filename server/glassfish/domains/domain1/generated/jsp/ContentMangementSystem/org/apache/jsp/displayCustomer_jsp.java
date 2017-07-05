@@ -62,6 +62,15 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
             request.setAttribute("customer", customer);
         
       out.write("\n");
+      out.write("        \n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("                function confirmation(){\n");
+      out.write("                    if(confirm(\"Kunde weg?\")){\n");
+      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                    } \n");
+      out.write("                }\n");
+      out.write("        </script>\n");
+      out.write("        \n");
       out.write("        Ausgewählter Kunde: <br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -88,10 +97,15 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
       out.write("        \n");
+      out.write("       \n");
+      out.write("        <form id=\"form\" name=\"DeleteCustomerForm\" action=\"DeleteCustomerServlet\">\n");
+      out.write("            <input type=\"button\" value=\"Kunden löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <a href=\"createBuilding.jsp\">Gebäude hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseBuilding.jsp\">Gebäude auswählen</a><br>\n");
       out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a>\n");
       out.write("    </body>\n");
+      out.write("    \n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

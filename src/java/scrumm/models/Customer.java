@@ -123,8 +123,6 @@ public class Customer implements Serializable {
                     throw new SQLException("Creating customer failed");
                 }
             }
-            
-            System.out.println(id);
              
             cn.commit();
            
@@ -136,9 +134,8 @@ public class Customer implements Serializable {
 
         } catch (Exception e ) {
           System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-          System.exit(0);
         }
-        System.out.println("Opened database successfully");
+        System.out.println("Created Customer successfully");
         
         
         /*try {
@@ -187,15 +184,44 @@ public class Customer implements Serializable {
 
         } catch (Exception e ) {
           System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-          System.exit(0);
         }
-        System.out.println("Opened database successfully");
+        System.out.println("Updated Customer successfully");
         
+    }
+    
+    public void delete(){
+        Connection cn;
+        
+        Statement deleteCustomer;
+        
+         try {
+            Class.forName("org.sqlite.JDBC");
+            cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
+
+            deleteCustomer = cn.createStatement();
+            deleteCustomer.execute("DELETE FROM kunde WHERE kundenID="+id);
+            
+            
+            deleteCustomer.close();
+            cn.close();
+            
+            System.out.println("Deleted Customer successfully");
+
+        } catch (Exception e ) {
+          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+        
+        
+        Customer.currentCustomer = null;
     }
     
      public void addBuilding(Building b){
        gebaeude.add(b);
     }
+     
+     public void removeCurrentBuilding(){
+         gebaeude.remove(currentBuilding);
+     }
 
     public String getVorname() {
         return vorname;

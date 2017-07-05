@@ -19,6 +19,15 @@
             Customer customer = Customer.currentCustomer;
             request.setAttribute("customer", customer);
         %>
+        
+        <script type="text/javascript">
+                function confirmation(){
+                    if(confirm("Kunde weg?")){
+                        document.getElementById("form").submit();
+                    } 
+                }
+        </script>
+        
         Ausgewählter Kunde: <br>
         Bezeichnung: ${customer.getBezeichnung()}<br>
         Adresse: ${customer.getAdresse()}<br>
@@ -29,8 +38,13 @@
         Telefon: ${customer.getTelefonnummer()}<br>
         Bemerkung: ${customer.getBemerkung()}<br>
         
+       
+        <form id="form" name="DeleteCustomerForm" action="DeleteCustomerServlet">
+            <input type="button" value="Kunden löschen" name="delete" onclick="confirmation()"/><br>
+        </form>
         <a href="createBuilding.jsp">Gebäude hinzufügen</a><br>
         <a href="chooseBuilding.jsp">Gebäude auswählen</a><br>
         <a href="index.jsp">Zurück zum Hauptmenü</a>
     </body>
+    
 </html>

@@ -66,6 +66,13 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
             request.setAttribute("floor", floor);
         
       out.write("\n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("        function confirmation(){\n");
+      out.write("                    if(confirm(\"safe?\")){\n");
+      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                    } \n");
+      out.write("                }\n");
+      out.write("        </script>\n");
       out.write("        Ausgewählte Ebene: <br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -73,6 +80,9 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        Bemerkung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
+      out.write("        <form id=\"form\" name=\"DeleteFloorForm\" action=\"DeleteFloorServlet\">\n");
+      out.write("            <input type=\"button\" value=\"Ebene löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <a href=\"createRoom.jsp\">Raum hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseRoom.jsp\">Raum auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

@@ -64,7 +64,7 @@ public final class chooseBuilding_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DO<DOCTYPE html>\n");
+      out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");

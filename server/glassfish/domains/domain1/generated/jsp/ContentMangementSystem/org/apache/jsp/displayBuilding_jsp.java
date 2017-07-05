@@ -65,6 +65,15 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
             request.setAttribute("building", building);
         
       out.write("\n");
+      out.write("        \n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("            function confirmation(){\n");
+      out.write("                if(window.confirm(\"safe?\")){\n");
+      out.write("                    document.getElementById(\"form\").submit();\n");
+      out.write("                }\n");
+      out.write("            }\n");
+      out.write("        </script>    \n");
+      out.write("        \n");
       out.write("        Ausgewähltes Gebäude: <br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${building.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -81,6 +90,9 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        Bemerkung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${building.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");
+      out.write("        <form id=\"form\" name=\"DeleteBuildingForm\" action=\"DeleteBuildingServlet\">\n");
+      out.write("            <input type=\"button\" value=\"Gebäude löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <a href=\"createFloor.jsp\">Ebene hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseFloor.jsp\">Ebene auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

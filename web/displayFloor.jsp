@@ -21,9 +21,19 @@
             Floor floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
             request.setAttribute("floor", floor);
         %>
+        <script type="text/javascript">
+        function confirmation(){
+                    if(confirm("safe?")){
+                        document.getElementById("form").submit();
+                    } 
+                }
+        </script>
         Ausgewählte Ebene: <br>
         Bezeichnung: ${floor.getBezeichnung()}<br>
         Bemerkung: ${floor.getBemerkung()}<br>
+        <form id="form" name="DeleteFloorForm" action="DeleteFloorServlet">
+            <input type="button" value="Ebene löschen" name="delete" onclick="confirmation()"/><br>
+        </form>
         <a href="createRoom.jsp">Raum hinzufügen</a><br>
         <a href="chooseRoom.jsp">Raum auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>

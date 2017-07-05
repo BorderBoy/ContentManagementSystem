@@ -50,7 +50,9 @@ public class Building implements Serializable, Comparable {
         ebenen.add(f);
     }
     
-    
+    public void removeCurrentFloor(){
+         ebenen.remove(currentFloor);
+     }
 
     public ArrayList<Floor> getEbenen() {
         return ebenen;

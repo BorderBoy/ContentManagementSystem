@@ -37,6 +37,10 @@ public class Floor implements Serializable{
     public void addRoom(Room r){
         raeume.add(r);
     }
+    
+    public void removeCurrentRoom(){
+         raeume.remove(currentRoom);
+     }
 
     public int getId() {
         return id;
