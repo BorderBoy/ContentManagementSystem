@@ -23,7 +23,7 @@
     </head>
     <body onload="initialize()">
         
-        <% 
+        <% //load customer from database
             
             ArrayList<String[]> customerList = new ArrayList<String[]>();
 
@@ -62,8 +62,9 @@
         %>
        
         
-       <form name="ChoosenCustomerForm" action="ChoosenCustomerServlet">
+        <form name="ChoosenCustomerForm" action="ChoosenCustomerServlet">
             <label>Kunden auswählen:<br>
+                <p id="message"></p>
                 <script type="text/javascript">
                     function SelectedValue(sel) {                            
                         document.getElementById("submit").removeAttribute('disabled');
@@ -78,8 +79,10 @@
                         if(sizee!=0){
                             document.getElementById("list").removeAttribute('disabled');
                             document.getElementById("list").removeAttribute('hidden');
+                            document.getElementById("submit").removeAttribute('hidden');
                         } else {
-                            document.write("nix Kunde"); 
+                            //document.write("nix Kunde"); 
+                            document.getElementById("message").innerHTML = "nix Kunde";
                         }
                     }
                 </script>
@@ -92,9 +95,9 @@
                  </select>
             </label>
                 
-                <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
-            
-       </form>    
+                <br><br><input disabled hidden id="submit" type="submit" value="Auswählen" name="submit" /><br>
+                <a href="index.jsp">Zurück zum Hauptmenü</p></a>
+        </form>
            
        
         

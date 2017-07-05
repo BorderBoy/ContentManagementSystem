@@ -71,7 +71,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                }\n");
       out.write("        </script>\n");
       out.write("        \n");
-      out.write("        Ausgewählter Kunde: <br>\n");
+      out.write("        <font size=\"6\">Ausgewählter Kunde: </font><br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");

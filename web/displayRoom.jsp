@@ -25,7 +25,10 @@
                     } 
                 }
         </script>
-        <font size="20">Ausgewählter Raum: </font><br>
+        <a href="displayCustomer.jsp"><% out.print(Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="displayBuilding.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a>
+        <a href="displayFloor.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung()); %></a><br>
+        <font size="6">Ausgewählter Raum: </font><br>
         Bezeichnung: ${room.getBezeichnung()}<br>
         Raumnummer: ${room.getRaumnummer()}<br>
         <form id="form" name="DeleteRoomForm" action="DeleteRoomServlet">

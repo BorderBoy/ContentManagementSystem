@@ -73,8 +73,10 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                }\n");
       out.write("            }\n");
       out.write("        </script>    \n");
-      out.write("        \n");
-      out.write("        Ausgewähltes Gebäude: <br>\n");
+      out.write("        <a href=\"displayCustomer.jsp\">");
+ out.println(Customer.currentCustomer.getBezeichnung()); 
+      out.write("</a><br>\n");
+      out.write("        <font size=\"6\">Ausgewähltes Gebäude: </font><br>\n");
       out.write("        Bezeichnung: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${building.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("<br>\n");

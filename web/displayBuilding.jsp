@@ -29,8 +29,8 @@
                 }
             }
         </script>    
-        
-        Ausgewähltes Gebäude: <br>
+        <a href="displayCustomer.jsp"><% out.println(Customer.currentCustomer.getBezeichnung()); %></a><br>
+        <font size="6">Ausgewähltes Gebäude: </font><br>
         Bezeichnung: ${building.getBezeichnung()}<br>
         Adresse: ${building.getAdresse()}<br>
         PLZ: ${building.getPlz()}<br>

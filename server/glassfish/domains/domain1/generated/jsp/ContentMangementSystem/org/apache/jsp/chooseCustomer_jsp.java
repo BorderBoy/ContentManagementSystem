@@ -80,7 +80,7 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("    <body onload=\"initialize()\">\n");
       out.write("        \n");
       out.write("        ");
- 
+ //load customer from database
             
             ArrayList<String[]> customerList = new ArrayList<String[]>();
 
@@ -120,8 +120,9 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\n");
       out.write("       \n");
       out.write("        \n");
-      out.write("       <form name=\"ChoosenCustomerForm\" action=\"ChoosenCustomerServlet\">\n");
+      out.write("        <form name=\"ChoosenCustomerForm\" action=\"ChoosenCustomerServlet\">\n");
       out.write("            <label>Kunden auswählen:<br>\n");
+      out.write("                <p id=\"message\"></p>\n");
       out.write("                <script type=\"text/javascript\">\n");
       out.write("                    function SelectedValue(sel) {                            \n");
       out.write("                        document.getElementById(\"submit\").removeAttribute('disabled');\n");
@@ -140,8 +141,10 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                        if(sizee!=0){\n");
       out.write("                            document.getElementById(\"list\").removeAttribute('disabled');\n");
       out.write("                            document.getElementById(\"list\").removeAttribute('hidden');\n");
+      out.write("                            document.getElementById(\"submit\").removeAttribute('hidden');\n");
       out.write("                        } else {\n");
-      out.write("                            document.write(\"nix Kunde\"); \n");
+      out.write("                            //document.write(\"nix Kunde\"); \n");
+      out.write("                            document.getElementById(\"message\").innerHTML = \"nix Kunde\";\n");
       out.write("                        }\n");
       out.write("                    }\n");
       out.write("                </script>\n");
@@ -157,9 +160,9 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                 </select>\n");
       out.write("            </label>\n");
       out.write("                \n");
-      out.write("                <br><br><input disabled id=\"submit\" type=\"submit\" value=\"Auswählen\" name=\"submit\" />\n");
-      out.write("            \n");
-      out.write("       </form>    \n");
+      out.write("                <br><br><input disabled hidden id=\"submit\" type=\"submit\" value=\"Auswählen\" name=\"submit\" />\n");
+      out.write("                <a href=\"index.jsp\">Zurück zum Hauptmenü</p></a>\n");
+      out.write("        </form>\n");
       out.write("           \n");
       out.write("       \n");
       out.write("        \n");
