@@ -25,8 +25,12 @@ and open the template in the editor.
         <%
             Customer.setCurrentCustomer(null);
         %>
+        <h1>Content Management System</h1>
         <a href="createCustomer.jsp">Neuen Kunden anlegen</a> <br>
-       <a href="chooseCustomer.jsp">Kunden auswählen</a>
+        <a href="chooseCustomer.jsp">Kunden auswählen</a>
+        <form name="ImportReadingsForm" action="ImportReadingsServlet">
+            <input type="submit" value="Messdaten einlesen" name="submit" />
+        </form>
     </body>
 </html>
 

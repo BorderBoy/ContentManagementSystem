@@ -21,38 +21,39 @@
             ArrayList<Floor> floorList = Customer.currentCustomer.getCurrentBuilding().getEbenen();
             request.setAttribute("floorList", floorList);
         %>
-        
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="displayBuidling.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
+        <h1>Ebene auswählen</h1>
         <form name="ChoosenFloorForm" action="ChoosenFloorServlet">
-            <label>Ebene auswählen:<br>
-                <script type="text/javascript">
-                    function SelectedValue(sel) {                            
-                        document.getElementById("submit").removeAttribute('disabled');
+            <script type="text/javascript">
+                function SelectedValue(sel) {
+                    document.getElementById("submit").removeAttribute('disabled');
+                }
+                function DoubleClicked() {
+                    document.getElementById("submit").click();
+                }
+                function initialize() {
+                    <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("floorList");
+                    int size = list.size();%>
+                    var sizee = "<%= size%>";
+                    if (sizee != 0) {
+                        document.getElementById("list").removeAttribute('disabled');
+                        document.getElementById("list").removeAttribute('hidden');
+                    } else {
+                        document.write("nix Ebene");
                     }
-                    function DoubleClicked (){
-                         document.getElementById("submit").click();
-                    }
-                    function initialize(){
-                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("floorList"); 
-                        int size = list.size(); %>
-                        var sizee = "<%= size%>";
-                        if(sizee!=0){
-                            document.getElementById("list").removeAttribute('disabled');
-                            document.getElementById("list").removeAttribute('hidden');
-                        } else {
-                            document.write("nix Ebene"); 
-                        }
-                    }
-                </script>
-               
-                <select id="list" disabled="true" hidden="true" name="floor" size="${floorList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
+                }
+            </script>
+
+            <select id="list" disabled="true" hidden="true" name="floor" size="${floorList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
                 <c:forEach items="${floorList}" var="item" varStatus="theCount">
-                   <option value="${theCount.index}">${item.getBezeichnung()}</option>
+                    <option value="${theCount.index}">${item.getBezeichnung()}</option>
                 </c:forEach>
-                 </select>
-            </label>
-                <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
-       </form>   
-        
-        
+            </select>
+            <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
+        </form>   
+
+
     </body>
 </html>

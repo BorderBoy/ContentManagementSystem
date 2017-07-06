@@ -27,8 +27,8 @@
                     } 
                 }
         </script>
-        
-        <font size="6">Ausgewählter Kunde: </font><br>
+        <a href="index.jsp">Home</a><br>
+        <h1>Ausgewählter Kunde: </h1>
         Bezeichnung: ${customer.getBezeichnung()}<br>
         Adresse: ${customer.getAdresse()}<br>
         PLZ: ${customer.getPlz()}<br>

@@ -4,6 +4,7 @@
     Author     : Uli
 --%>
 
+<%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,23 +14,26 @@
     </head>
     <body>
         <script type="text/javascript">
-             function check() {
-                var data = document.getElementById("plz").value;
-                console.log(parseInt(data));
-                if(!isNaN(data)) {
-                    var bez = document.getElementById("bez").value;
-                    if(bez !== ""){
-                        document.getElementById("form").submit();
-                    } else {
-                        alert("ey bezeichnung");
-                    }
-                } else {
-                    alert("plz nummer!");
-                }
-                 
-             }
-         
-         </script>
+            function check() {
+               var data = document.getElementById("plz").value;
+               console.log(parseInt(data));
+               if(!isNaN(data)) {
+                   var bez = document.getElementById("bez").value;
+                   if(bez !== ""){
+                       document.getElementById("form").submit();
+                   } else {
+                       alert("ey bezeichnung");
+                   }
+               } else {
+                   alert("plz nummer!");
+               }
+
+            }
+
+        </script>
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.println(" > " + Customer.currentCustomer.getBezeichnung()); %></a><br>
+        <h1>Gebäude erstellen</h1>
         <form id="form" name="CreateBulidingForm" action="CreateBuildingServlet"> 
             Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="Haus" /><br>
             Adresse: <input type="text" name="adresse" value="Strasse 1" /><br>

@@ -1,22 +1,23 @@
-/* AUTOMATICALLY GENERATED ON Wed Jul 05 18:49:54 CEST 2017*/
+/* AUTOMATICALLY GENERATED ON Thu Jul 06 03:18:14 CEST 2017*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.WebUserDataPermission "/";
   permission javax.security.jacc.WebResourcePermission "/";
+  permission javax.security.jacc.WebUserDataPermission "/";
 };
 
 grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenCustomerServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "ImportReadingsServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateRoomServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "DeleteDeviceServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBulidingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenBuildingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";
-  permission javax.security.jacc.WebRoleRefPermission "DeleteFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBuildingServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "DeleteFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
   permission javax.security.jacc.WebRoleRefPermission "DeleteCustomerServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateDeviceServlet", "**";

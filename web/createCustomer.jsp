@@ -14,23 +14,26 @@
         
     </head>
     <body>
-         <script type="text/javascript">
-             function check() {
-                var plz = document.getElementById("plz").value;
-                if(!isNaN(plz)) {
-                    var bez = document.getElementById("bez").value;
-                    if(bez !== ""){
-                        document.getElementById("form").submit();
-                    } else {
-                        alert("ey bezeichnung");
-                    }
-                } else {
-                    alert("plz nummer!");
-                }
-                 
-             }
+        <script type="text/javascript">
+            function check() {
+               var plz = document.getElementById("plz").value;
+               if(!isNaN(plz)) {
+                   var bez = document.getElementById("bez").value;
+                   if(bez !== ""){
+                       document.getElementById("form").submit();
+                   } else {
+                       alert("ey bezeichnung");
+                   }
+               } else {
+                   alert("plz nummer!");
+               }
+
+            }
          
-         </script>
+        </script>
+        
+        <a href="index.jsp">Home</a><br>
+        <h1>Kunde erstellen</h1>
         <form id="form" name="CreateCustomerForm" action="CreateCustomerServlet">
             Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="Uaschluch" /><br>
             Adresse: <input type="text" name="adresse" value="Disney Land" /><br>

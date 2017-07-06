@@ -4,6 +4,7 @@
     Author     : Uli
 --%>
 
+<%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,11 @@
                     alert("ey bezeichnung");
                 }
             }
-         </script>
+        </script>
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="displayBuidling.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
+        <h1>Ebene erstellen</h1>
         <form id="form" name="CreateFloorForm" action="CreateFloorServlet"> 
             Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="Ebene"  /><br>
             Bemerkung: <input type="text" name="bemerkung" value="enjdg" /><br>

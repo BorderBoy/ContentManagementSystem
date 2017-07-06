@@ -28,9 +28,10 @@
                     document.getElementById("form").submit();
                 }
             }
-        </script>    
-        <a href="displayCustomer.jsp"><% out.println(Customer.currentCustomer.getBezeichnung()); %></a><br>
-        <font size="6">Ausgewähltes Gebäude: </font><br>
+        </script>   
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.println(" > " + Customer.currentCustomer.getBezeichnung()); %></a><br>
+        <h1>Ausgewähltes Gebäude: </h1>
         Bezeichnung: ${building.getBezeichnung()}<br>
         Adresse: ${building.getAdresse()}<br>
         PLZ: ${building.getPlz()}<br>

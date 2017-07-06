@@ -22,39 +22,44 @@
             ArrayList<Room> roomList = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume();
             request.setAttribute("roomList", roomList);
         %>
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="displayBuilding.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a>
+        <a href="displayFloor.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung()); %></a><br>
+        
+        <h1>Raum auswählen</h1>
         
         <form name="ChoosenRoomForm" action="ChoosenRoomServlet">
-            <label>Raum auswählen:<br>
-                <script type="text/javascript">
-                    function SelectedValue(sel) {                            
-                        document.getElementById("submit").removeAttribute('disabled');
+
+            <script type="text/javascript">
+                function SelectedValue(sel) {
+                    document.getElementById("submit").removeAttribute('disabled');
+                }
+                function DoubleClicked() {
+                    document.getElementById("submit").click();
+                }
+                function initialize() {
+                       <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("roomList");
+                    int size = list.size();%>
+                    var sizee = "<%= size%>";
+                    if (sizee != 0) {
+                        document.getElementById("list").removeAttribute('disabled');
+                        document.getElementById("list").removeAttribute('hidden');
+                    } else {
+                        document.write("nix Raum");
                     }
-                    function DoubleClicked (){
-                        document.getElementById("submit").click();
-                    }
-                    function initialize(){
-                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("roomList"); 
-                        int size = list.size(); %>
-                        var sizee = "<%= size%>";
-                        if(sizee!=0){
-                            document.getElementById("list").removeAttribute('disabled');
-                            document.getElementById("list").removeAttribute('hidden');
-                        } else {
-                            document.write("nix Raum"); 
-                        }
-                    }
-                </script>
-               
-                <select id="list" disabled="true" hidden="true" name="room" size="${roomList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
+                }
+            </script>
+
+            <select id="list" disabled="true" hidden="true" name="room" size="${roomList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
                 <c:forEach items="${roomList}" var="item" varStatus="theCount">
-                   <option value="${theCount.index}">${item.getBezeichnung()}</option>
+                    <option value="${theCount.index}">${item.getBezeichnung()}</option>
                 </c:forEach>
-                 </select>
-            </label>
-                <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
-       </form>   
-        
-        
+            </select>
+            <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
+        </form>   
+
+
     </body>
 </html>
 

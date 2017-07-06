@@ -69,8 +69,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
             Customer.setCurrentCustomer(null);
         
       out.write("\n");
+      out.write("        <h1>Content Management System</h1>\n");
       out.write("        <a href=\"createCustomer.jsp\">Neuen Kunden anlegen</a> <br>\n");
-      out.write("       <a href=\"chooseCustomer.jsp\">Kunden auswählen</a>\n");
+      out.write("        <a href=\"chooseCustomer.jsp\">Kunden auswählen</a>\n");
+      out.write("        <form name=\"ImportReadingsForm\" action=\"ImportReadingsServlet\">\n");
+      out.write("            <input type=\"submit\" value=\"Messdaten einlesen\" name=\"submit\" />\n");
+      out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
       out.write("\n");

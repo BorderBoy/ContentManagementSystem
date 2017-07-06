@@ -28,9 +28,12 @@
                     } 
                 }
         </script>
-        <a href="displayCustomer.jsp"><% out.print(Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
         <a href="displayBuidling.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
-        <font size="6">Ausgewählte Ebene: </font><br>
+        
+        <h1>Ausgewählte Ebene: </h1>
+        
         Bezeichnung: ${floor.getBezeichnung()}<br>
         Bemerkung: ${floor.getBemerkung()}<br>
         <form id="form" name="DeleteFloorForm" action="DeleteFloorServlet">

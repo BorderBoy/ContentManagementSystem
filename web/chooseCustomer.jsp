@@ -22,9 +22,9 @@
         <title>Kunden auswählen</title>
     </head>
     <body onload="initialize()">
-        
+
         <% //load customer from database
-            
+
             ArrayList<String[]> customerList = new ArrayList<String[]>();
 
             try {
@@ -32,19 +32,17 @@
                 Statement st;
                 ResultSet rs;
 
-
                 Class.forName("org.sqlite.JDBC");
                 cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
-                st = cn.createStatement();  
+                st = cn.createStatement();
 
                 rs = st.executeQuery("SELECT * FROM kunde ORDER BY bezeichnung desc");
 
-
-                while(rs.next()){
+                while (rs.next()) {
                     //customerList.add(new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID")));
                     String[] array;
                     array = new String[2];
-                    array[0] = rs.getInt("kundenID")+"";
+                    array[0] = rs.getInt("kundenID") + "";
                     array[1] = rs.getString("bezeichnung");
                     customerList.add(array);
                 }
@@ -53,53 +51,57 @@
                 st.close();
                 cn.close();
 
-
-
             } catch (Exception e) {
-            }   
-            
-            request.setAttribute("customerList",customerList);
+            }
+
+            request.setAttribute("customerList", customerList);
         %>
-       
-        
+
+        <a href="index.jsp">Home</a><br>
+        <h1>Kunde auswählen</h1>
         <form name="ChoosenCustomerForm" action="ChoosenCustomerServlet">
-            <label>Kunden auswählen:<br>
-                <p id="message"></p>
-                <script type="text/javascript">
-                    function SelectedValue(sel) {                            
-                        document.getElementById("submit").removeAttribute('disabled');
-                     }
-                     function DoubleClicked (){
-                         document.getElementById("submit").click();
-                     }
-                    function initialize(){
-                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList"); 
-                        int size = list.size(); %>
-                        var sizee = "<%= size%>";
-                        if(sizee!=0){
-                            document.getElementById("list").removeAttribute('disabled');
-                            document.getElementById("list").removeAttribute('hidden');
-                            document.getElementById("submit").removeAttribute('hidden');
-                        } else {
-                            //document.write("nix Kunde"); 
-                            document.getElementById("message").innerHTML = "nix Kunde";
-                        }
+
+            <p id="message"></p>
+            <a href="index.jsp"><p id="linkMessage"></p></a>
+
+            <script type="text/javascript">
+                function SelectedValue(sel) {
+                    document.getElementById("submit").removeAttribute('disabled');
+                }
+                function DoubleClicked() {
+                    document.getElementById("submit").click();
+                }
+                function initialize() {
+                    <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList");
+                        int size = list.size();%>
+                    var sizee = "<%= size%>";
+                    if (sizee != 0) {
+                        document.getElementById("list").removeAttribute('disabled');
+                        document.getElementById("list").removeAttribute('hidden');
+                        document.getElementById("submit").removeAttribute('hidden');
+                    } else {
+                        //document.write("nix Kunde"); 
+                        document.getElementById("message").innerHTML = "nix Kunde";
+                        document.getElementById("linkMessage").innerHTML = "Zurück zum Hauptmenü";
+
+
                     }
-                </script>
-                
-                
-                <select id="list" name="customer" disabled="true" hidden="true" size="${customerList.size()}"  ondblclick="DoubleClicked()" onclick ="SelectedValue(this)">
+                }
+            </script>
+
+
+            <select id="list" name="customer" disabled="true" hidden="true" size="${customerList.size()}"  ondblclick="DoubleClicked()" onclick ="SelectedValue(this)">
                 <c:forEach items="${customerList}" var="item">
-                   <option value="${item[0]}">${item[0]}: ${item[1]}</option>
+                    <option value="${item[0]}">${item[0]}: ${item[1]}</option>
                 </c:forEach>
-                 </select>
-            </label>
-                
-                <br><br><input disabled hidden id="submit" type="submit" value="Auswählen" name="submit" /><br>
-                <a href="index.jsp">Zurück zum Hauptmenü</p></a>
+            </select>
+
+
+            <br><br><input disabled hidden id="submit" type="submit" value="Auswählen" name="submit" /><br>
+
         </form>
-           
-       
-        
+
+
+
     </body>
 </html>

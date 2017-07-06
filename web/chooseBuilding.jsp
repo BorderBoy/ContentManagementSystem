@@ -22,39 +22,41 @@
             Collections.sort(buildingList);
             request.setAttribute("buildingList", buildingList);
         %>
-        
-        <form name="ChoosenBuildingForm" action="ChoosenBuildingServlet">
-            <label>Gebäude auswählen:<br>
-                <script type="text/javascript">
-                    function SelectedValue(sel) {                            
-                        document.getElementById("submit").removeAttribute('disabled');
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.println(" > " + Customer.currentCustomer.getBezeichnung()); %></a><br>
+
+        <h1>Gebäude auswählen</h1>
+
+        <form name="ChoosenBuildingForm" action="ChoosenBuildingServlet">  
+            <script type="text/javascript">
+                function SelectedValue(sel) {
+                    document.getElementById("submit").removeAttribute('disabled');
+                }
+                function DoubleClicked() {
+                    document.getElementById("submit").click();
+                }
+                function initialize() {
+                    <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("buildingList");
+                        int size = list.size();%>
+                    var sizee = "<%= size%>";
+                    if (sizee != 0) {
+                        document.getElementById("list").removeAttribute('disabled');
+                        document.getElementById("list").removeAttribute('hidden');
+                    } else {
+                        document.write("nix Gebäude");
                     }
-                    function DoubleClicked (){
-                         document.getElementById("submit").click();
-                    }
-                    function initialize(){
-                        <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("buildingList"); 
-                        int size = list.size(); %>
-                        var sizee = "<%= size%>";
-                        if(sizee!=0){
-                            document.getElementById("list").removeAttribute('disabled');
-                            document.getElementById("list").removeAttribute('hidden');
-                        } else {
-                            document.write("nix Gebäude"); 
-                        }
-                    }
-                
-                </script>
-               
-                <select id="list" disabled="true" hidden="true" name="building" size="${buildingList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
+                }
+
+            </script>
+
+            <select id="list" disabled="true" hidden="true" name="building" size="${buildingList.size()}" ondblclick="DoubleClicked()" onclick="SelectedValue(this)">
                 <c:forEach items="${buildingList}" var="item" varStatus="theCount">
-                   <option value="${theCount.index}">${item.getBezeichnung()}</option>
+                    <option value="${theCount.index}">${item.getBezeichnung()}</option>
                 </c:forEach>
-                 </select>
-            </label>
-                <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
-       </form>   
-        
-        
+            </select>
+            <br><br><input disabled id="submit" type="submit" value="Auswählen" name="submit" />
+        </form>   
+
+
     </body>
 </html>

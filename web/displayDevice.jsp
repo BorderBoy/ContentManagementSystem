@@ -28,11 +28,14 @@
                     
                 }
         </script>
-        <a href="displayCustomer.jsp"><% out.print(Customer.currentCustomer.getBezeichnung()); %></a>
+        <a href="index.jsp">Home</a>
+        <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
         <a href="displayBuilding.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a>
         <a href="displayFloor.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung()); %></a>
         <a href="displayRoom.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getBezeichnung()); %></a><br>
-        <font size="6">Ausgewähltes Gerät: </font><br>
+        
+        <h1>Ausgewähltes Gerät: </h1>
+        
         Bezeichnung: ${device.getBezeichnung()}<br>
         ID: ${device.getId()}<br>
         Klasse: ${device.getKlasse()}<br>
