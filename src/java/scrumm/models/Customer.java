@@ -5,12 +5,8 @@
  */
 package scrumm.models;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.sql.Connection;
@@ -38,6 +34,8 @@ public class Customer implements Serializable {
     private String bemerkung;
     private int id;
     private Building currentBuilding;
+    private int maxID1;
+    private int maxID2;
     
     public static Customer currentCustomer;
     
@@ -53,6 +51,10 @@ public class Customer implements Serializable {
         this.telefonnummer = telefonnummer;
         this.bemerkung = bemerkung;
         id = -1;
+        this.maxID1 = 0;
+        this.maxID2 = 50000;
+        
+        gebaeude = new ArrayList<Building>();
         
     }
 
@@ -66,12 +68,15 @@ public class Customer implements Serializable {
         this.telefonnummer = telefonnummer;
         this.bemerkung = bemerkung;
         id = -1;
+        maxID1 = 00000;
+        maxID2 = 50000;
+        
         
         gebaeude = new ArrayList<Building>();
         
     }
 
-    public Customer(String vorname, String nachname, String bezeichnung, String ort, String adresse, ArrayList<Building> gebaeude, int plz, String telefonnummer, String bemerkung, int id) {
+    public Customer(String vorname, String nachname, String bezeichnung, String ort, String adresse, ArrayList<Building> gebaeude, int plz, String telefonnummer, String bemerkung, int id, int maxID1, int maxID2) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.bezeichnung = bezeichnung;
@@ -82,11 +87,27 @@ public class Customer implements Serializable {
         this.telefonnummer = telefonnummer;
         this.bemerkung = bemerkung;
         this.id = id;
+        this.maxID1 = maxID1;
+        this.maxID2 = maxID2;
+        
+        gebaeude = new ArrayList<Building>();
     }
-    
-    
-    
-  
+
+    public Customer(String vorname, String nachname, String bezeichnung, String ort, String adresse, int plz, String telefonnummer, String bemerkung, int id, int maxID1, int maxID2) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.bezeichnung = bezeichnung;
+        this.ort = ort;
+        this.adresse = adresse;
+        this.plz = plz;
+        this.telefonnummer = telefonnummer;
+        this.bemerkung = bemerkung;
+        this.id = id;
+        this.maxID1 = maxID1;
+        this.maxID2 = maxID2;
+        
+        gebaeude = new ArrayList<Building>();
+    }
     
     
     public void store(){
@@ -106,7 +127,7 @@ public class Customer implements Serializable {
             
             cn.setAutoCommit(false);
             
-            insertCustomer = cn.prepareStatement("INSERT INTO kunde (ort,adresse,bezeichnung,plz,vorname,nachname,telefonnummer,bemerkung, gebaeude) VALUES ('"+ort+"','"+adresse+"','"+bezeichnung+"','"+plz+"','"+vorname+"','"+nachname+"','"+telefonnummer+"','"+bemerkung+"', ?)", Statement.RETURN_GENERATED_KEYS);
+            insertCustomer = cn.prepareStatement("INSERT INTO kunde (ort,adresse,bezeichnung,plz,vorname,nachname,telefonnummer,bemerkung, gebaeude, maxID1, maxID2) VALUES ('"+ort+"','"+adresse+"','"+bezeichnung+"','"+plz+"','"+vorname+"','"+nachname+"','"+telefonnummer+"','"+bemerkung+"', ? ,'"+maxID1+"','"+maxID2+"')", Statement.RETURN_GENERATED_KEYS);
             
             
             insertCustomer.setBytes(1, convertToBytes(gebaeude));
@@ -165,10 +186,12 @@ public class Customer implements Serializable {
             
             cn.setAutoCommit(false);
             
-            updateCustomer = cn.prepareStatement("UPDATE kunde SET gebaeude = ? WHERE kundenID = " + id);
+            updateCustomer = cn.prepareStatement("UPDATE kunde SET gebaeude = ?, maxID1 = ?, maxID2 = ? WHERE kundenID = " + id);
             
             
             updateCustomer.setBytes(1, convertToBytes(gebaeude));
+            updateCustomer.setInt(2, maxID1);
+            updateCustomer.setInt(3, maxID2);
             int newRow = updateCustomer.executeUpdate();
             
             if (newRow == 0) {
@@ -314,11 +337,32 @@ public class Customer implements Serializable {
     public void setCurrentBuilding(Building currentBuilding) {
         this.currentBuilding = currentBuilding;
     }
+
+    public int getMaxID1() {
+        return maxID1;
+    }
+
+    public void setMaxID1(int maxID1) {
+        this.maxID1 = maxID1;
+    }
+
+    public int getMaxID2() {
+        return maxID2;
+    }
+
+    public void setMaxID2(int maxID2) {
+        this.maxID2 = maxID2;
+    }
     
-    
-    
-    
-    
+    public int increaseMaxID(int type){
+        if(type == 1){
+            return maxID1++;
+        } else if(type == 2){
+            return maxID2++;
+        } else {
+            return -1;
+        }
+    }
     
     public byte[] convertToBytes(ArrayList<Building> list) throws IOException{
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -326,13 +370,4 @@ public class Customer implements Serializable {
         oos.writeObject(list);
         return bos.toByteArray();
     }
-    
-    public ArrayList<Building> convertToArrayList(byte[] bytes) throws IOException, ClassNotFoundException{
-        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
-        ObjectInputStream ois = new ObjectInputStream(bis);
-        
-        return (ArrayList<Building>) ois.readObject();
-    }
-    
-    
 }

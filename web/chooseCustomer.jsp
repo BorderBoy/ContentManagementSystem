@@ -39,7 +39,6 @@
                 rs = st.executeQuery("SELECT * FROM kunde ORDER BY bezeichnung desc");
 
                 while (rs.next()) {
-                    //customerList.add(new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID")));
                     String[] array;
                     array = new String[2];
                     array[0] = rs.getInt("kundenID") + "";

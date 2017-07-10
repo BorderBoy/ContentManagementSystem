@@ -7,6 +7,12 @@ package scrumm.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,11 +41,53 @@ public class CreateDeviceServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Device device = new Device(Integer.parseInt(request.getParameter("id")),request.getParameter("bezeichnung"),Integer.parseInt(request.getParameter("klasse")));
-
+        
+        int type = Integer.parseInt(request.getParameter("klasse"));
+       
+        
+        Device device = new Device(Customer.currentCustomer.increaseMaxID(type),request.getParameter("bezeichnung"),type);
+        
+        
+        
         Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().addDevice(device);
         Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().setCurrentDevice(device);
         Customer.currentCustomer.update();
+        
+        
+        Connection cn;
+        PreparedStatement insertCustomer;
+        
+        try {
+            Class.forName("org.sqlite.JDBC");
+            cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
+            
+            cn.setAutoCommit(false);
+            
+            insertCustomer = cn.prepareStatement("INSERT INTO geraet (geraeteID, gebaeude, etage, raum, bezeichnung, kundenID, kunde) VALUES (?,?,?,?,?,?,?)");
+            
+            insertCustomer.setInt(1, device.getId());
+            insertCustomer.setString(2, Customer.currentCustomer.getCurrentBuilding().getBezeichnung());
+            insertCustomer.setString(3, Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung());
+            insertCustomer.setString(4, Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getBezeichnung());
+            insertCustomer.setString(5, device.getBezeichnung());
+            insertCustomer.setInt(6, Customer.currentCustomer.getId());
+            insertCustomer.setString(7, Customer.currentCustomer.getBezeichnung());
+            
+            insertCustomer.executeUpdate();
+             
+            cn.commit();
+           
+            cn.setAutoCommit(true);
+            
+            insertCustomer.close();
+            cn.close();
+            
+
+        } catch (Exception e ) {
+          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+        System.out.println("Created Device successfully");
+        
         
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayDevice.jsp");
         dispatcher.forward(request, response);

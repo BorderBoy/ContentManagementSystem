@@ -31,7 +31,7 @@
         <h1>Gerät erstellen</h1>
         <form id="form" name="CreateDeviceForm" action="CreateDeviceServlet"> 
             Bezeichnung: <input type="text" name="bezeichnung" value="geräääät" id="bez" /><br>
-            ID: <input type="text" name="id" value="1209" /><br>
+            <!--ID: <input type="text" name="id" value="1209" /><br>-->
             Klasse: <br>
             <input type="radio" name="klasse" value="1" checked /> 1 <br>
             <input type="radio" name="klasse" value="2" /> 2 <br>

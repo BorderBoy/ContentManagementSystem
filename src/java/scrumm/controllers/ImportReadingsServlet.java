@@ -9,11 +9,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.Arrays;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -64,10 +65,26 @@ public class ImportReadingsServlet extends HttpServlet {
             BufferedReader br = new BufferedReader(new FileReader("../../../../../table.csv"));
             String line;
             String[] columNames = new String[41];
+            String input=""; 
+            
+            
+            
+            while((line = br.readLine()) != null){
+                input += line + "\n";
+            }
+            
+            input = input.replaceAll("\n ","");
+            
+            PrintWriter out = new PrintWriter("filesname.txt");
+            out.println(input);
+            
+            br = new BufferedReader(new StringReader(input));
+            
             
             if((line = br.readLine()) !=null){
-                columNames = line.split(";");
+                columNames = line.split(";", -1);
             }
+            
             
             
             try{
@@ -81,26 +98,28 @@ public class ImportReadingsServlet extends HttpServlet {
             }
             
             while ((line = br.readLine()) != null) {
-                String[] values = line.split(";", -1);    //your seperator
-                
-                System.out.println(line);
-                System.out.println("a" + values[2]);
                 
                 
-                System.out.println("Länge: " + values.length);
-                //System.out.println("INSERT INTO messergebnis ("+columNames[6]+"','"+columNames[7]+"','"+columNames[8]+"','"+columNames[9]+"','"+columNames[10]+"','"+columNames[11]+"','"+columNames[12]+"','"+columNames[13]+"','"+columNames[14]+"','"+columNames[15]+"','"+columNames[16]+"','"+columNames[17]+"','"+columNames[18]+"','"+columNames[19]+"','"+columNames[20]+"','"+columNames[21]+"','"+columNames[22]+"','"+columNames[23]+"','"+columNames[24]+"','"+columNames[25]+"','"+columNames[26]+"','"+columNames[27]+"','"+columNames[28]+"','"+columNames[29]+"','"+columNames[30]+"','"+columNames[31]+"','"+columNames[32]+"','"+columNames[33]+"','"+columNames[34]+"','"+columNames[35]+"','"+columNames[36]+"','"+columNames[37]+"','"+columNames[38]+"','"+columNames[39]+"','"+columNames[40]+") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-                
-                st = cn.prepareStatement("INSERT INTO messergebnis ('"+columNames[6]+"','"+columNames[7]+"','"+columNames[8]+"','"+columNames[9]+"','"+columNames[10]+"','"+columNames[11]+"','"+columNames[12]+"','"+columNames[13]+"','"+columNames[14]+"','"+columNames[15]+"','"+columNames[16]+"','"+columNames[17]+"','"+columNames[18]+"','"+columNames[19]+"','"+columNames[20]+"','"+columNames[21]+"','"+columNames[22]+"','"+columNames[23]+"','"+columNames[24]+"','"+columNames[25]+"','"+columNames[26]+"','"+columNames[27]+"','"+columNames[28]+"','"+columNames[29]+"','"+columNames[30]+"','"+columNames[31]+"','"+columNames[32]+"','"+columNames[33]+"','"+columNames[34]+"','"+columNames[35]+"','"+columNames[36]+"','"+columNames[37]+"','"+columNames[38]+"','"+columNames[39]+"','"+columNames[40]+"') VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                String[] values = line.split(";",-1);    //your seperator
                 
                 
-                for(int i = 6; i < values.length; i++){
-                    st.setString(i-5, values[i]);
-                 }
                 
-                st.executeUpdate();
-                cn.commit();      
-                st.close();
-                 //Use a PeparedStatemant, it´s easier and safer 
+                if(values[Arrays.asList(columNames).indexOf("Art")].equals("Secutest Messung")){
+                    int kunde = Integer.parseInt(values[Arrays.asList(columNames).indexOf("Prüfobjekt")].substring(0,3));
+                    int geraet = Integer.parseInt(values[Arrays.asList(columNames).indexOf("Prüfobjekt")].substring(4,8));//muss noch eins länger werden!!!!
+                    st = cn.prepareStatement("INSERT INTO messergebnis ('"+columNames[6]+"','"+columNames[7]+"','"+columNames[8]+"','"+columNames[9]+"','"+columNames[10]+"','"+columNames[11]+"','"+columNames[12]+"','"+columNames[13]+"','"+columNames[14]+"','"+columNames[15]+"','"+columNames[16]+"','"+columNames[17]+"','"+columNames[18]+"','"+columNames[19]+"','"+columNames[20]+"','"+columNames[21]+"','"+columNames[22]+"','"+columNames[23]+"','"+columNames[24]+"','"+columNames[25]+"','"+columNames[26]+"','"+columNames[27]+"','"+columNames[28]+"','"+columNames[29]+"','"+columNames[30]+"','"+columNames[31]+"','"+columNames[32]+"','"+columNames[33]+"','"+columNames[34]+"','"+columNames[35]+"','"+columNames[36]+"','"+columNames[37]+"','"+columNames[38]+"','"+columNames[39]+"','kundenID','geraeteID') VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
+                    for(int i = 6; i < values.length-1; i++){
+                        st.setString(i-5, values[i]);
+                    }
+                    
+                    st.setInt(35, kunde);
+                    st.setInt(36, geraet);
+
+                    st.executeUpdate();
+                    cn.commit();      
+                    st.close();
+                }
             }
             
             

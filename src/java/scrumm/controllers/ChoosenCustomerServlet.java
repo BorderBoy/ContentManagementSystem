@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import scrumm.models.Building;
 import scrumm.models.Customer;
+import scrumm.models.Utility;
 
 /**
  *
@@ -62,9 +63,12 @@ public class ChoosenCustomerServlet extends HttpServlet {
             
             rs = st.executeQuery("SELECT * FROM kunde WHERE kundenID = "+customerID);
             
-            
             while(rs.next()){
-                customer = new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID"));
+                if(rs.getBytes("gebaeude")!= null){
+                    customer = new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), Utility.convertToArrayList(rs.getBytes("gebaeude")), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID"), rs.getInt("maxID1"), rs.getInt("maxID2"));
+                } else {
+                    customer = new Customer(rs.getString("vorname"), rs.getString("nachname"), rs.getString("bezeichnung"), rs.getString("ort"), rs.getString("adresse"), rs.getInt("plz"), rs.getString("telefonnummer"), rs.getString("bemerkung"), rs.getInt("kundenID"), rs.getInt("kundenID"), rs.getInt("maxID1"));
+                }
             }
             
             rs.close();
@@ -76,6 +80,7 @@ public class ChoosenCustomerServlet extends HttpServlet {
             
             
         } catch (Exception e) {
+             System.err.println("database connection failed");
         }
         
         //request.setAttribute(customerBeanID, customer);
@@ -125,11 +130,6 @@ public class ChoosenCustomerServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
-    public ArrayList<Building> convertToArrayList(byte[] bytes) throws IOException, ClassNotFoundException{
-        ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
-        ObjectInputStream ois = new ObjectInputStream(bis);
-        
-        return (ArrayList<Building>) ois.readObject();
-    } //temporary: centralize!
+    
 
 }
