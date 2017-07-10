@@ -37,12 +37,22 @@ public class CreateFloorServlet extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            Floor floor = new Floor(request.getParameter("bezeichnung"),request.getParameter("bemerkung"));
-       
-            Customer.currentCustomer.getCurrentBuilding().addFloor(floor);
-            Customer.currentCustomer.getCurrentBuilding().setCurrentFloor(floor);
-            Customer.currentCustomer.update();
+        
+        
+            request.setCharacterEncoding("UTF-8");
             
+            if(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor() == null){
+                Floor floor = new Floor(request.getParameter("bezeichnung"),request.getParameter("bemerkung"));
+                Customer.currentCustomer.getCurrentBuilding().addFloor(floor);
+                Customer.currentCustomer.getCurrentBuilding().setCurrentFloor(floor);
+                Customer.currentCustomer.update();
+            } else {
+                Floor floor = new Floor(request.getParameter("bezeichnung"), request.getParameter("bemerkung"), Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume());
+                Customer.currentCustomer.getCurrentBuilding().getEbenen().set(Customer.currentCustomer.getCurrentBuilding().getEbenen().indexOf(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor()), floor);
+                Customer.currentCustomer.getCurrentBuilding().setCurrentFloor(floor);
+                Customer.currentCustomer.update();
+            }
+
        
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayFloor.jsp");  
             dispatcher.forward(request, response);

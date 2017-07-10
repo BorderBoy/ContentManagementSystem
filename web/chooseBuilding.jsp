@@ -28,6 +28,11 @@
         <h1>Gebäude auswählen</h1>
 
         <form name="ChoosenBuildingForm" action="ChoosenBuildingServlet">  
+            
+            <p id="message"></p>
+            <a href="displayCustomer.jsp"><p id="linkMessage"></p></a>
+            
+            
             <script type="text/javascript">
                 function SelectedValue(sel) {
                     document.getElementById("submit").removeAttribute('disabled');
@@ -43,7 +48,8 @@
                         document.getElementById("list").removeAttribute('disabled');
                         document.getElementById("list").removeAttribute('hidden');
                     } else {
-                        document.write("nix Gebäude");
+                        document.getElementById("message").innerHTML = "nix Gebäude";
+                        document.getElementById("linkMessage").innerHTML = "Zurück zum Kunden";
                     }
                 }
 

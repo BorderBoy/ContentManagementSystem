@@ -64,6 +64,7 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
 
             Floor floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
             request.setAttribute("floor", floor);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().setCurrentRoom(null);
         
       out.write("\n");
       out.write("        <script type=\"text/javascript\">\n");
@@ -77,7 +78,7 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <a href=\"displayCustomer.jsp\">");
  out.print(" > " + Customer.currentCustomer.getBezeichnung()); 
       out.write("</a>\n");
-      out.write("        <a href=\"displayBuidling.jsp\">");
+      out.write("        <a href=\"displayBuilding.jsp\">");
  out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); 
       out.write("</a><br>\n");
       out.write("        \n");
@@ -92,6 +93,7 @@ public final class displayFloor_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <form id=\"form\" name=\"DeleteFloorForm\" action=\"DeleteFloorServlet\">\n");
       out.write("            <input type=\"button\" value=\"Ebene löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
       out.write("        </form>\n");
+      out.write("        <a href=\"createFloor.jsp\">Ebene bearbeiten</a><br>\n");
       out.write("        <a href=\"createRoom.jsp\">Raum hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseRoom.jsp\">Raum auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

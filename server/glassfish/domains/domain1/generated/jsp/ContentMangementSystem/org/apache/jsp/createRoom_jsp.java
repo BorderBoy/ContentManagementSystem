@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import scrumm.models.Room;
 import scrumm.models.Customer;
 
 public final class createRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
@@ -47,6 +48,7 @@ public final class createRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("   <head>\n");
@@ -54,6 +56,19 @@ public final class createRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">       \n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        ");
+
+            Room room;
+            if(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom() != null){
+                room = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom();
+                request.setAttribute("headline", "Raum bearbeiten");
+            } else {
+                room = new Room("Raum", "68486.185");     
+                request.setAttribute("headline", "Raum erstellen");
+            }
+            request.setAttribute("room", room);
+        
+      out.write("\n");
       out.write("        <script type=\"text/javascript\">\n");
       out.write("           function check() {\n");
       out.write("               var bez = document.getElementById(\"bez\").value;\n");
@@ -75,10 +90,16 @@ public final class createRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <a href=\"displayFloor.jsp\">");
  out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung()); 
       out.write("</a><br>\n");
-      out.write("        <h1>Raum erstellen</h1>\n");
+      out.write("        <h1>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${headline}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h1>\n");
       out.write("        <form id=\"form\" name=\"CreateRoomForm\" action=\"CreateRoomServlet\"> \n");
-      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"Raum\" /><br>\n");
-      out.write("            Raumnummer: <input type=\"text\" name=\"raumnummer\" value=\"684648.684694\" id=\"raumnr\" /><br>\n");
+      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Raumnummer: <input type=\"text\" name=\"raumnummer\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${room.getRaumnummer()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" id=\"raumnr\" /><br>\n");
       out.write("            <input type=\"button\" value=\"Fertig\" name=\"submitButton\" onclick=\"check()\" /><br>\n");
       out.write("        </form>\n");
       out.write("    </body>\n");

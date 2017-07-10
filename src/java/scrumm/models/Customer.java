@@ -156,6 +156,7 @@ public class Customer implements Serializable {
         } catch (Exception e ) {
           System.err.println( e.getClass().getName() + ": " + e.getMessage() );
         }
+        
         System.out.println("Created Customer successfully");
         
         
@@ -192,6 +193,50 @@ public class Customer implements Serializable {
             updateCustomer.setBytes(1, convertToBytes(gebaeude));
             updateCustomer.setInt(2, maxID1);
             updateCustomer.setInt(3, maxID2);
+            int newRow = updateCustomer.executeUpdate();
+            
+            if (newRow == 0) {
+                throw new SQLException("Updating customer failed, no rows affected.");
+            }
+             
+            cn.commit();
+           
+            cn.setAutoCommit(true);
+            
+            updateCustomer.close();
+            cn.close();
+
+        } catch (Exception e ) {
+          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+        System.out.println("Updated Customer successfully");
+        
+    }
+    
+    public void updateAll(){
+        Connection cn;
+        
+        PreparedStatement updateCustomer;
+        
+         try {
+            Class.forName("org.sqlite.JDBC");
+            cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
+            
+            cn.setAutoCommit(false);
+            
+            updateCustomer = cn.prepareStatement("UPDATE kunde SET vorname = ?, nachname = ?, bezeichnung = ?, adresse = ?, plz = ?, ort = ?, telefonnummer = ?, bemerkung  = ? WHERE kundenID = " + id);
+            
+            
+            updateCustomer.setString(1, vorname);
+            updateCustomer.setString(2, nachname);    
+            updateCustomer.setString(3, bezeichnung);
+            updateCustomer.setString(4, adresse);
+            updateCustomer.setInt(5, plz);
+            updateCustomer.setString(6, ort);
+            updateCustomer.setString(7, telefonnummer);
+            updateCustomer.setString(8, bemerkung);
+            
+            
             int newRow = updateCustomer.executeUpdate();
             
             if (newRow == 0) {

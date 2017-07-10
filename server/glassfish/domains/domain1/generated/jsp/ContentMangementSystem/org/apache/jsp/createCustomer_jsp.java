@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import scrumm.models.Customer;
 
 public final class createCustomer_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -54,6 +55,20 @@ public final class createCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        \n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        ");
+
+            Customer customer;
+            if(Customer.currentCustomer != null){
+                customer = Customer.currentCustomer;
+                request.setAttribute("headline", "Kunden bearbeiten");
+            } else {
+                customer = new Customer("Uaschluch", "äy", "kundeney", "orts", "Disney LAnd", 666, "01245", "af"); 
+                request.setAttribute("headline", "Kunden erstellen");
+            }
+            request.setAttribute("customer", customer);
+        
+      out.write("\n");
+      out.write("       \n");
       out.write("        <script type=\"text/javascript\">\n");
       out.write("            function check() {\n");
       out.write("               var plz = document.getElementById(\"plz\").value;\n");
@@ -73,16 +88,34 @@ public final class createCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        </script>\n");
       out.write("        \n");
       out.write("        <a href=\"index.jsp\">Home</a><br>\n");
-      out.write("        <h1>Kunde erstellen</h1>\n");
+      out.write("        <h1>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${headline}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h1>\n");
       out.write("        <form id=\"form\" name=\"CreateCustomerForm\" action=\"CreateCustomerServlet\">\n");
-      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"Uaschluch\" /><br>\n");
-      out.write("            Adresse: <input type=\"text\" name=\"adresse\" value=\"Disney Land\" /><br>\n");
-      out.write("            PLZ: <input id=\"plz\" type=\"text\" name=\"plz\" value=\"666\" /><br>\n");
-      out.write("            Ort: <input type=\"text\" name=\"ort\" value=\"a\" /><br>\n");
-      out.write("            Vorname: <input type=\"text\" name=\"vorname\" value=\"eooj j\" /><br>\n");
-      out.write("            Nachname: <input type=\"text\" name=\"nachname\" value=\"eooj j\" /><br>\n");
-      out.write("            Telefon: <input type=\"text\" name=\"telefonnummer\" value=\"eooj j\" /><br>\n");
-      out.write("            Bemerkung: <input type=\"text\" name=\"bemerkung\" value=\"eooj j\" /><br>\n");
+      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Adresse: <input type=\"text\" name=\"adresse\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getAdresse()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            PLZ: <input id=\"plz\" type=\"text\" name=\"plz\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getPlz()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Ort: <input type=\"text\" name=\"ort\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getOrt()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Vorname: <input type=\"text\" name=\"vorname\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getVorname()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Nachname: <input type=\"text\" name=\"nachname\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getNachname()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Telefon: <input type=\"text\" name=\"telefonnummer\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getTelefonnummer()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
+      out.write("            Bemerkung: <input type=\"text\" name=\"bemerkung\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${customer.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
       out.write("            <input type=\"button\" value=\"Fertig\" name=\"submitButton\" onclick=\"check()\"/>\n");
       out.write("        </form>\n");
       out.write("    </body>\n");

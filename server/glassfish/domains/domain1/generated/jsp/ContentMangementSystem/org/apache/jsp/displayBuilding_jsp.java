@@ -63,6 +63,7 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
 
             Building building = Customer.currentCustomer.getCurrentBuilding();
             request.setAttribute("building", building);
+            Customer.currentCustomer.getCurrentBuilding().setCurrentFloor(null);
         
       out.write("\n");
       out.write("        \n");
@@ -96,6 +97,7 @@ public final class displayBuilding_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <form id=\"form\" name=\"DeleteBuildingForm\" action=\"DeleteBuildingServlet\">\n");
       out.write("            <input type=\"button\" value=\"Gebäude löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
       out.write("        </form>\n");
+      out.write("        <a href=\"createBuilding.jsp\">Gebäude bearbeiten</a><br>\n");
       out.write("        <a href=\"createFloor.jsp\">Ebene hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseFloor.jsp\">Ebene auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

@@ -31,6 +31,9 @@
         <a href="displayRoom.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getBezeichnung()); %></a><br>
         <h1>Gerät auswählen:</h1>
         <form name="ChoosenDeviceForm" action="ChoosenDeviceServlet">
+            
+            <p id="message"></p>
+            <a href="displayRoom.jsp"><p id="linkMessage"></p></a>
 
             <script type="text/javascript">
                 function SelectedValue(sel) {
@@ -47,7 +50,9 @@
                         document.getElementById("list").removeAttribute('disabled');
                         document.getElementById("list").removeAttribute('hidden');
                     } else {
-                        document.write("nix Gerät");
+                        document.getElementById("message").innerHTML = "nix Gerät";
+                        document.getElementById("linkMessage").innerHTML = "Zurück zum Raum";
+
                     }
                 }
 

@@ -20,6 +20,7 @@
         <%
             Building building = Customer.currentCustomer.getCurrentBuilding();
             request.setAttribute("building", building);
+            Customer.currentCustomer.getCurrentBuilding().setCurrentFloor(null);
         %>
         
         <script type="text/javascript">
@@ -40,6 +41,7 @@
         <form id="form" name="DeleteBuildingForm" action="DeleteBuildingServlet">
             <input type="button" value="Gebäude löschen" name="delete" onclick="confirmation()"/><br>
         </form>
+        <a href="createBuilding.jsp">Gebäude bearbeiten</a><br>
         <a href="createFloor.jsp">Ebene hinzufügen</a><br>
         <a href="chooseFloor.jsp">Ebene auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>

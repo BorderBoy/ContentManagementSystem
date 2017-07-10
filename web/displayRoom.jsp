@@ -17,6 +17,7 @@
         <%
             Room room = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom();
             request.setAttribute("room", room);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().setCurrentDevice(null);
         %>
         <script type="text/javascript">
                 function confirmation(){
@@ -35,6 +36,7 @@
         <form id="form" name="DeleteRoomForm" action="DeleteRoomServlet">
             <input type="button" value="Raum löschen" name="delete" onclick="confirmation()"/><br>
         </form>
+        <a href="createRoom.jsp">Raum bearbeiten</a><br>
         <a href="createDevice.jsp">Gerät hinzufügen</a><br>
         <a href="chooseDevice.jsp">Gerät auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>

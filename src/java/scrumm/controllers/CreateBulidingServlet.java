@@ -39,15 +39,24 @@ public class CreateBulidingServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
+        request.setCharacterEncoding("UTF-8");
+        
          try{
+             
             int num = Integer.parseInt(request.getParameter("plz"));
                 
-            Building building = new Building(request.getParameter("bezeichnung"),request.getParameter("adresse"),Integer.parseInt(request.getParameter("plz")),request.getParameter("ort"),request.getParameter("bemerkung"));
-       
-            Customer.currentCustomer.addBuilding(building);
-            Customer.currentCustomer.setCurrentBuilding(building);
-            Customer.currentCustomer.update();
-            
+            if(Customer.currentCustomer.getCurrentBuilding() == null){
+                Building building = new Building(request.getParameter("bezeichnung"),request.getParameter("adresse"),Integer.parseInt(request.getParameter("plz")),request.getParameter("ort"),request.getParameter("bemerkung"));
+                Customer.currentCustomer.addBuilding(building);
+                Customer.currentCustomer.setCurrentBuilding(building);
+                Customer.currentCustomer.update();
+            } else {
+                Building building = new Building(Customer.currentCustomer.getCurrentBuilding().getEbenen(), request.getParameter("bezeichnung"),request.getParameter("adresse"),Integer.parseInt(request.getParameter("plz")),request.getParameter("ort"),request.getParameter("bemerkung"));
+                Customer.currentCustomer.getGebaeude().set(Customer.currentCustomer.getGebaeude().indexOf(Customer.currentCustomer.getCurrentBuilding()), building);
+                Customer.currentCustomer.setCurrentBuilding(building);
+                Customer.currentCustomer.update();
+            }
             
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayBuilding.jsp");  
             dispatcher.forward(request, response);

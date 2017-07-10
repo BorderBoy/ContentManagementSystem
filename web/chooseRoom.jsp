@@ -30,6 +30,10 @@
         <h1>Raum auswählen</h1>
         
         <form name="ChoosenRoomForm" action="ChoosenRoomServlet">
+            
+            <p id="message"></p>
+            <a href="displayFloor.jsp"><p id="linkMessage"></p></a>
+            
 
             <script type="text/javascript">
                 function SelectedValue(sel) {
@@ -46,7 +50,8 @@
                         document.getElementById("list").removeAttribute('disabled');
                         document.getElementById("list").removeAttribute('hidden');
                     } else {
-                        document.write("nix Raum");
+                        document.getElementById("message").innerHTML = "nix Raum";
+                        document.getElementById("linkMessage").innerHTML = "Zurück zur Ebene";
                     }
                 }
             </script>

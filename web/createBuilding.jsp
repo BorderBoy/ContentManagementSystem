@@ -4,6 +4,7 @@
     Author     : Uli
 --%>
 
+<%@page import="scrumm.models.Building"%>
 <%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +14,18 @@
         <title>Gebäude erstellen</title>
     </head>
     <body>
+        <%
+            Building building;
+            if(Customer.currentCustomer.getCurrentBuilding() != null){
+                building = Customer.currentCustomer.getCurrentBuilding();
+                request.setAttribute("headline", "Gebäude bearbeiten");
+            } else {
+                building = new Building("haus", "Strasse 1", 777, "Stadt", "jaskfsk");                
+                request.setAttribute("headline", "Gebäude erstellen");
+            }
+            request.setAttribute("building", building);
+        %>
+        
         <script type="text/javascript">
             function check() {
                var data = document.getElementById("plz").value;
@@ -29,17 +42,16 @@
                }
 
             }
-
         </script>
         <a href="index.jsp">Home</a>
         <a href="displayCustomer.jsp"><% out.println(" > " + Customer.currentCustomer.getBezeichnung()); %></a><br>
-        <h1>Gebäude erstellen</h1>
+        <h1>${headline}</h1>
         <form id="form" name="CreateBulidingForm" action="CreateBuildingServlet"> 
-            Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="Haus" /><br>
-            Adresse: <input type="text" name="adresse" value="Strasse 1" /><br>
-            PLZ: <input id="plz" type="text" name="plz" value="777" /><br>
-            Ort: <input type="text" name="ort" value="Stadt" /><br>
-            Bemerkung: <input type="text" name="bemerkung" value="enjadg" /><br>
+            Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="${building.getBezeichnung()}" /><br>
+            Adresse: <input type="text" name="adresse" value="${building.getAdresse()}" /><br>
+            PLZ: <input id="plz" type="text" name="plz" value="${building.getPlz()}" /><br>
+            Ort: <input type="text" name="ort" value="${building.getOrt()}" /><br>
+            Bemerkung: <input type="text" name="bemerkung" value="${building.getBemerkung()}" /><br>
             <input type="button" value="Fertig" name="submitButton" onclick="check()"/><br>
         </form>
     </body>

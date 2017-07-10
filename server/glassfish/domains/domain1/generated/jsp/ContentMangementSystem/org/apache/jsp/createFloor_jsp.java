@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import scrumm.models.Floor;
 import scrumm.models.Customer;
 
 public final class createFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
@@ -47,6 +48,7 @@ public final class createFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -55,6 +57,19 @@ public final class createFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        ");
+
+            Floor floor;
+            if(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor() != null){
+                floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
+                request.setAttribute("headline", "Ebene bearbeiten");
+            } else {
+                floor = new Floor("Ebene", "enjdg");     
+                request.setAttribute("headline", "Ebene erstellen");
+            }
+            request.setAttribute("floor", floor);
+        
+      out.write("\n");
       out.write("        <script type=\"text/javascript\">\n");
       out.write("            function check() {\n");
       out.write("                var bez = document.getElementById(\"bez\").value;\n");
@@ -72,10 +87,16 @@ public final class createFloor_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <a href=\"displayBuidling.jsp\">");
  out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); 
       out.write("</a><br>\n");
-      out.write("        <h1>Ebene erstellen</h1>\n");
+      out.write("        <h1>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${headline}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h1>\n");
       out.write("        <form id=\"form\" name=\"CreateFloorForm\" action=\"CreateFloorServlet\"> \n");
-      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"Ebene\"  /><br>\n");
-      out.write("            Bemerkung: <input type=\"text\" name=\"bemerkung\" value=\"enjdg\" /><br>\n");
+      out.write("            Bezeichnung: <input id=\"bez\" type=\"text\" name=\"bezeichnung\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBezeichnung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\"  /><br>\n");
+      out.write("            Bemerkung: <input type=\"text\" name=\"bemerkung\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${floor.getBemerkung()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\" /><br>\n");
       out.write("            <input type=\"button\" value=\"Fertig\" name=\"submitButton\" onclick=\"check()\"/><br>\n");
       out.write("        </form>\n");
       out.write("    </body>\n");

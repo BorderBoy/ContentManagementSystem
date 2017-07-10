@@ -37,16 +37,24 @@ public class CreateCustomerServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
             
+            request.setCharacterEncoding("UTF-8");
+           
            
             
             try{
                 int num = Integer.parseInt(request.getParameter("plz"));
                 // is an integer!
               
-        
-                Customer customer = new Customer(request.getParameter("vorname"), request.getParameter("nachname"), request.getParameter("bezeichnung"), request.getParameter("ort"), request.getParameter("adresse"), Integer.parseInt(request.getParameter("plz")), request.getParameter("telefonnummer"), request.getParameter("bemerkung"));
-                Customer.setCurrentCustomer(customer);
-                customer.store();
+                if(Customer.currentCustomer == null){
+                    Customer customer = new Customer(request.getParameter("vorname"), request.getParameter("nachname"), request.getParameter("bezeichnung"), request.getParameter("ort"), request.getParameter("adresse"), Integer.parseInt(request.getParameter("plz")), request.getParameter("telefonnummer"), request.getParameter("bemerkung"));
+                    Customer.setCurrentCustomer(customer);
+                    customer.store();
+                } else {
+                    Customer customer = new Customer(request.getParameter("vorname"), request.getParameter("nachname"), request.getParameter("bezeichnung"), request.getParameter("ort"), request.getParameter("adresse"), Customer.currentCustomer.getGebaeude(), Integer.parseInt(request.getParameter("plz")), request.getParameter("telefonnummer"), request.getParameter("bemerkung"), Customer.currentCustomer.getId(), Customer.currentCustomer.getMaxID1(), Customer.currentCustomer.getMaxID2());
+                    Customer.setCurrentCustomer(customer);
+                    customer.updateAll();
+                }
+                
 
                 //request.setAttribute(customerID, customer);
 

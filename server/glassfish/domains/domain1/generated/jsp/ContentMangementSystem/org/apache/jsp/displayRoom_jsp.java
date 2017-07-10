@@ -60,6 +60,7 @@ public final class displayRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
 
             Room room = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom();
             request.setAttribute("room", room);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().setCurrentDevice(null);
         
       out.write("\n");
       out.write("        <script type=\"text/javascript\">\n");
@@ -89,6 +90,7 @@ public final class displayRoom_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <form id=\"form\" name=\"DeleteRoomForm\" action=\"DeleteRoomServlet\">\n");
       out.write("            <input type=\"button\" value=\"Raum löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
       out.write("        </form>\n");
+      out.write("        <a href=\"createRoom.jsp\">Raum bearbeiten</a><br>\n");
       out.write("        <a href=\"createDevice.jsp\">Gerät hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseDevice.jsp\">Gerät auswählen</a><br>\n");
       out.write("        <a href=\"displayCustomer.jsp\">Kunden anzeigen</a><br>\n");

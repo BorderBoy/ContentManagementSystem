@@ -60,6 +60,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
 
             Customer customer = Customer.currentCustomer;
             request.setAttribute("customer", customer);
+            Customer.currentCustomer.setCurrentBuilding(null);
         
       out.write("\n");
       out.write("        \n");
@@ -101,6 +102,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <form id=\"form\" name=\"DeleteCustomerForm\" action=\"DeleteCustomerServlet\">\n");
       out.write("            <input type=\"button\" value=\"Kunden löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
       out.write("        </form>\n");
+      out.write("        <a href=\"createCustomer.jsp\">Kunde berarbeiten</a><br>\n");
       out.write("        <a href=\"createBuilding.jsp\">Gebäude hinzufügen</a><br>\n");
       out.write("        <a href=\"chooseBuilding.jsp\">Gebäude auswählen</a><br>\n");
       out.write("        <a href=\"index.jsp\">Zurück zum Hauptmenü</a>\n");

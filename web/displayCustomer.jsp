@@ -18,6 +18,7 @@
         <%
             Customer customer = Customer.currentCustomer;
             request.setAttribute("customer", customer);
+            Customer.currentCustomer.setCurrentBuilding(null);
         %>
         
         <script type="text/javascript">
@@ -42,6 +43,7 @@
         <form id="form" name="DeleteCustomerForm" action="DeleteCustomerServlet">
             <input type="button" value="Kunden löschen" name="delete" onclick="confirmation()"/><br>
         </form>
+        <a href="createCustomer.jsp">Kunde berarbeiten</a><br>
         <a href="createBuilding.jsp">Gebäude hinzufügen</a><br>
         <a href="chooseBuilding.jsp">Gebäude auswählen</a><br>
         <a href="index.jsp">Zurück zum Hauptmenü</a>

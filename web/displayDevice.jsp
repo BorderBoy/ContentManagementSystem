@@ -42,6 +42,7 @@
         <form id="form" name="DeleteDeviceForm" action="DeleteDeviceServlet">
             <input type="button" value="Gerät löschen" name="delete" onclick="confirmation()"/><br>
         </form>
+        <a href="createDevice.jsp">Gerät bearbeiten</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>
         <a href="displayBuilding.jsp">Gebäude anzeigen</a><br>
         <a href="displayFloor.jsp">Ebene anzeigen</a><br>

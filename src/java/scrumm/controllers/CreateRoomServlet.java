@@ -34,11 +34,20 @@ public class CreateRoomServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Room room = new Room(request.getParameter("bezeichnung"),request.getParameter("raumnummer"));
-
-        Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().addRoom(room);
-        Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().setCurrentRoom(room);
-        Customer.currentCustomer.update();
+        
+        request.setCharacterEncoding("UTF-8");
+        
+        if(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom() == null){
+            Room room = new Room(request.getParameter("bezeichnung"),request.getParameter("raumnummer"));
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().addRoom(room);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().setCurrentRoom(room);
+            Customer.currentCustomer.update();
+        } else {
+            Room room = new Room(request.getParameter("bezeichnung"), request.getParameter("raumnummer"), Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getGeraete());
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume().set(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getRaeume().indexOf(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom()), room);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().setCurrentRoom(room);
+            Customer.currentCustomer.update();
+        }
         
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayRoom.jsp");
         dispatcher.forward(request, response);

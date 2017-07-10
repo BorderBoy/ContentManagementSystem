@@ -26,6 +26,11 @@
         <a href="displayBuidling.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
         <h1>Ebene auswählen</h1>
         <form name="ChoosenFloorForm" action="ChoosenFloorServlet">
+            
+            <p id="message"></p>
+            <a href="displayBuilding.jsp"><p id="linkMessage"></p></a>
+            
+            
             <script type="text/javascript">
                 function SelectedValue(sel) {
                     document.getElementById("submit").removeAttribute('disabled');
@@ -41,7 +46,8 @@
                         document.getElementById("list").removeAttribute('disabled');
                         document.getElementById("list").removeAttribute('hidden');
                     } else {
-                        document.write("nix Ebene");
+                        document.getElementById("message").innerHTML = "nix Ebene";
+                        document.getElementById("linkMessage").innerHTML = "Zurück zum Gebäude";
                     }
                 }
             </script>

@@ -20,6 +20,7 @@
        <%
             Floor floor = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor();
             request.setAttribute("floor", floor);
+            Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().setCurrentRoom(null);
         %>
         <script type="text/javascript">
         function confirmation(){
@@ -30,7 +31,7 @@
         </script>
         <a href="index.jsp">Home</a>
         <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
-        <a href="displayBuidling.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
+        <a href="displayBuilding.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a><br>
         
         <h1>Ausgewählte Ebene: </h1>
         
@@ -39,6 +40,7 @@
         <form id="form" name="DeleteFloorForm" action="DeleteFloorServlet">
             <input type="button" value="Ebene löschen" name="delete" onclick="confirmation()"/><br>
         </form>
+        <a href="createFloor.jsp">Ebene bearbeiten</a><br>
         <a href="createRoom.jsp">Raum hinzufügen</a><br>
         <a href="chooseRoom.jsp">Raum auswählen</a><br>
         <a href="displayCustomer.jsp">Kunden anzeigen</a><br>

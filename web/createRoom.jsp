@@ -4,6 +4,7 @@
     Author     : Uli
 --%>
 
+<%@page import="scrumm.models.Room"%>
 <%@page import="scrumm.models.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +14,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">       
     </head>
     <body>
+        <%
+            Room room;
+            if(Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom() != null){
+                room = Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom();
+                request.setAttribute("headline", "Raum bearbeiten");
+            } else {
+                room = new Room("Raum", "68486.185");     
+                request.setAttribute("headline", "Raum erstellen");
+            }
+            request.setAttribute("room", room);
+        %>
         <script type="text/javascript">
            function check() {
                var bez = document.getElementById("bez").value;
@@ -28,10 +40,10 @@
         <a href="displayCustomer.jsp"><% out.print(" > " + Customer.currentCustomer.getBezeichnung()); %></a>
         <a href="displayBuilding.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getBezeichnung()); %></a>
         <a href="displayFloor.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getBezeichnung()); %></a><br>
-        <h1>Raum erstellen</h1>
+        <h1>${headline}</h1>
         <form id="form" name="CreateRoomForm" action="CreateRoomServlet"> 
-            Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="Raum" /><br>
-            Raumnummer: <input type="text" name="raumnummer" value="684648.684694" id="raumnr" /><br>
+            Bezeichnung: <input id="bez" type="text" name="bezeichnung" value="${room.getBezeichnung()}" /><br>
+            Raumnummer: <input type="text" name="raumnummer" value="${room.getRaumnummer()}" id="raumnr" /><br>
             <input type="button" value="Fertig" name="submitButton" onclick="check()" /><br>
         </form>
     </body>
