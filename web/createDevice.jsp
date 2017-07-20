@@ -55,12 +55,16 @@
         <a href="displayRoom.jsp"><% out.print(" > " + Customer.currentCustomer.getCurrentBuilding().getCurrentFloor().getCurrentRoom().getBezeichnung()); %></a><br>
         <h1>${headline}</h1>
         <form id="form" name="CreateDeviceForm" action="CreateDeviceServlet"> 
-            Bezeichnung: <input type="text" name="bezeichnung" value="${device.getBezeichnung()}" id="bez" /><br>
+            Bezeichnung: <input type="text" name="bezeichnung" value="${device.getBezeichnung()}" id="bez" list="deviceSuggestions" /><br>
             <!--ID: <input type="text" name="id" value="1209" /><br>-->
             Klasse: <br>
             <input ${enabled} type="radio" name="klasse" value="1" ${checked1} /> 1 <br>
-            <input ${enabled} type="radio" name="klasse" value="2" ${checked2}/> 2 <br>
+            <input ${enabled} type="radio" name="klasse" value="2" ${checked2} /> 2 <br>
             <input type="button" value="Fertig" name="submitButton" onclick="check()" /><br>
+            
+            <datalist id="deviceSuggestions">
+                
+            </datalist>
         </form>
     </body>
 </html>

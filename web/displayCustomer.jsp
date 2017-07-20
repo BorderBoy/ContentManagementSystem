@@ -24,7 +24,7 @@
         <script type="text/javascript">
                 function confirmation(){
                     if(confirm("Kunde weg?")){
-                        document.getElementById("form").submit();
+                        document.getElementById("deleteForm").submit();
                     } 
                 }
         </script>
@@ -40,8 +40,11 @@
         Bemerkung: ${customer.getBemerkung()}<br>
         
        
-        <form id="form" name="DeleteCustomerForm" action="DeleteCustomerServlet">
+        <form id="deleteForm" name="DeleteCustomerForm" action="DeleteCustomerServlet">
             <input type="button" value="Kunden löschen" name="delete" onclick="confirmation()"/><br>
+        </form>
+        <form id="printForm" name="PrintForm" action="PrintServlet">
+            <input type="submit" value="Drucken" name="print"/><br>
         </form>
         <a href="createCustomer.jsp">Kunde berarbeiten</a><br>
         <a href="createBuilding.jsp">Gebäude hinzufügen</a><br>

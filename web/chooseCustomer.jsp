@@ -68,11 +68,13 @@
                     document.getElementById("submit").removeAttribute('disabled');
                 }
                 function DoubleClicked() {
-                    document.getElementById("submit").click();
+                        document.getElementById("submit").click();
                 }
                 function initialize() {
-                    <% ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList");
-                        int size = list.size();%>
+                    <%
+                        ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList");
+                        int size = list.size();
+                    %>
                     var sizee = "<%= size%>";
                     if (sizee != 0) {
                         document.getElementById("list").removeAttribute('disabled');

@@ -126,12 +126,14 @@ public final class chooseCustomer_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                    document.getElementById(\"submit\").removeAttribute('disabled');\n");
       out.write("                }\n");
       out.write("                function DoubleClicked() {\n");
-      out.write("                    document.getElementById(\"submit\").click();\n");
+      out.write("                        document.getElementById(\"submit\").click();\n");
       out.write("                }\n");
       out.write("                function initialize() {\n");
       out.write("                    ");
- ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList");
+
+                        ArrayList<String> list = (ArrayList<String>) request.getAttribute("customerList");
                         int size = list.size();
+                    
       out.write("\n");
       out.write("                    var sizee = \"");
       out.print( size);

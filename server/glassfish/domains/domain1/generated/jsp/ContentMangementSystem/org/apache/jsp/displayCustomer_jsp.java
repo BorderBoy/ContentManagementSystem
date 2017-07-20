@@ -67,7 +67,7 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <script type=\"text/javascript\">\n");
       out.write("                function confirmation(){\n");
       out.write("                    if(confirm(\"Kunde weg?\")){\n");
-      out.write("                        document.getElementById(\"form\").submit();\n");
+      out.write("                        document.getElementById(\"deleteForm\").submit();\n");
       out.write("                    } \n");
       out.write("                }\n");
       out.write("        </script>\n");
@@ -99,8 +99,11 @@ public final class displayCustomer_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<br>\n");
       out.write("        \n");
       out.write("       \n");
-      out.write("        <form id=\"form\" name=\"DeleteCustomerForm\" action=\"DeleteCustomerServlet\">\n");
+      out.write("        <form id=\"deleteForm\" name=\"DeleteCustomerForm\" action=\"DeleteCustomerServlet\">\n");
       out.write("            <input type=\"button\" value=\"Kunden löschen\" name=\"delete\" onclick=\"confirmation()\"/><br>\n");
+      out.write("        </form>\n");
+      out.write("        <form id=\"printForm\" name=\"PrintForm\" action=\"PrintServlet\">\n");
+      out.write("            <input type=\"submit\" value=\"Drucken\" name=\"print\"/><br>\n");
       out.write("        </form>\n");
       out.write("        <a href=\"createCustomer.jsp\">Kunde berarbeiten</a><br>\n");
       out.write("        <a href=\"createBuilding.jsp\">Gebäude hinzufügen</a><br>\n");
