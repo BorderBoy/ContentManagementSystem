@@ -11479,3 +11479,1578 @@ java.lang.UnsatisfiedLinkError: org.sqlite.core.NativeDB._open_utf8([BI)V
 [2017-07-21T01:19:04.545+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=708 _ThreadName=Thread-8] [timeMillis: 1500592744545] [levelValue: 800] [[
   JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
 
+[2017-07-21T15:48:19.118+0200] [glassfish 4.1] [INFO] [NCLS-LOGGING-00009] [javax.enterprise.logging] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644899118] [levelValue: 800] [[
+  Running GlassFish Version: GlassFish Server Open Source Edition  4.1.1  (build 1)]]
+
+[2017-07-21T15:48:19.122+0200] [glassfish 4.1] [INFO] [NCLS-LOGGING-00010] [javax.enterprise.logging] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644899122] [levelValue: 800] [[
+  Server log file is using Formatter class: com.sun.enterprise.server.logging.ODLLogFormatter]]
+
+[2017-07-21T15:48:19.291+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644899291] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2017-07-21T15:48:19.295+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644899295] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2017-07-21T15:48:19.299+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644899299] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2017-07-21T15:48:19.845+0200] [glassfish 4.1] [INFO] [SEC-SVCS-00100] [javax.enterprise.security.services] [tid: _ThreadID=19 _ThreadName=RunLevelControllerThread-1500644898905] [timeMillis: 1500644899845] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2017-07-21T15:48:19.992+0200] [glassfish 4.1] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500644898905] [timeMillis: 1500644899992] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2017-07-21T15:48:20.069+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900069] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-1, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:48:20.099+0200] [glassfish 4.1] [INFO] [jts.startup_msg] [javax.enterprise.system.core.transaction.com.sun.jts.CosTransactions] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644900099] [levelValue: 800] [[
+  JTS5014: Recoverable JTS instance, serverId = [100]]]
+
+[2017-07-21T15:48:20.215+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900215] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 98ms - bound to [/0.0.0.0:8080]]]
+
+[2017-07-21T15:48:20.241+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900241] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-2, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:48:20.431+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900431] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 179ms - bound to [/0.0.0.0:8181]]]
+
+[2017-07-21T15:48:20.436+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900436] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=admin-listener, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:48:20.481+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644900481] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 31ms - bound to [/0.0.0.0:4848]]]
+
+[2017-07-21T15:48:20.547+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500644898905] [timeMillis: 1500644900547] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 10ms - bound to [/0.0.0.0:3700]]]
+
+[2017-07-21T15:48:21.002+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901002] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:21.490+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901490] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2017-07-21T15:48:21.491+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901491] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2017-07-21T15:48:21.501+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901501] [levelValue: 800] [[
+  Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.]]
+
+[2017-07-21T15:48:21.552+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901552] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2017-07-21T15:48:21.873+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901873] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2017-07-21T15:48:21.882+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901882] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2017-07-21T15:48:21.887+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901887] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2017-07-21T15:48:21.921+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901921] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2017-07-21T15:48:21.924+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644901924] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2017-07-21T15:48:22.183+0200] [glassfish 4.1] [INFO] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902183] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2017-07-21T15:48:22.184+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902184] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2017-07-21T15:48:22.736+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902736] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:22.864+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902864] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:22.865+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902865] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:22.866+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902866] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:22.992+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644902992] [levelValue: 900] [[
+  The web application [unknown] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T15:48:23.115+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644903115] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:48:23.119+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00022] [javax.enterprise.system.core] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500644898838] [timeMillis: 1500644903119] [levelValue: 800] [[
+  Loading application ContentMangementSystem done in 3.195 ms]]
+
+[2017-07-21T15:48:23.122+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1500644903122] [levelValue: 800] [[
+  GlassFish Server Open Source Edition  4.1.1  (1) startup time : Felix (6.970ms), startup services(4.308ms), total(11.278ms)]]
+
+[2017-07-21T15:48:23.250+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500644898835] [timeMillis: 1500644903250] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 16ms - bound to [/0.0.0.0:7676]]]
+
+[2017-07-21T15:48:23.280+0200] [glassfish 4.1] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500644903280] [levelValue: 800] [[
+  HV000001: Hibernate Validator 5.1.2.Final]]
+
+[2017-07-21T15:48:23.508+0200] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00027] [javax.enterprise.bootstrap] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1500644903508] [levelValue: 800] [[
+  Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@f339eae as OSGi service registration: org.apache.felix.framework.ServiceRegistrationImpl@ae7950d.]]
+
+[2017-07-21T15:48:23.660+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=15 _ThreadName=Thread-8] [timeMillis: 1500644903660] [levelValue: 800] [[
+  C:\Users\Jonas\Desktop\Code\cms\ContentManagementSystem\server\glassfish\domains\domain1\autodeploy\bundles does not exist, please create it.]]
+
+[2017-07-21T15:48:23.983+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644903983] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-2, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:48:24.007+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644904007] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2017-07-21T15:48:24.079+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644904079] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 7ms - bound to [/0.0.0.0:8181]]]
+
+[2017-07-21T15:48:24.190+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644904190] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-1, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:48:24.191+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644904191] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2017-07-21T15:48:24.215+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=89 _ThreadName=pool-21-thread-1] [timeMillis: 1500644904215] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 16ms - bound to [/0.0.0.0:8080]]]
+
+[2017-07-21T15:48:25.296+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905296] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:25.473+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905473] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:25.554+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905554] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:25.556+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905556] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:25.557+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905557] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:48:25.731+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905731] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:48:25.779+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500644905779] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 721 milliseconds.]]
+
+[2017-07-21T15:48:27.941+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00005] [javax.enterprise.system.jmx] [tid: _ThreadID=73 _ThreadName=Thread-19] [timeMillis: 1500644907941] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://Jonas-Win10:8686/jndi/rmi://Jonas-Win10:8686/jmxrmi]]
+
+[2017-07-21T15:53:38.638+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645218638] [levelValue: 800] [[
+  Created Customer successfully]]
+
+[2017-07-21T15:53:41.475+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=105 _ThreadName=Thread-8] [timeMillis: 1500645221475] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:53:43.767+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645223767] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:53:46.082+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=105 _ThreadName=Thread-8] [timeMillis: 1500645226082] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:53:48.235+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645228235] [levelValue: 800] [[
+  1]]
+
+[2017-07-21T15:53:48.242+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645228242] [levelValue: 800] [[
+  Created Device successfully]]
+
+[2017-07-21T15:53:48.250+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645228250] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:53:56.913+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=105 _ThreadName=Thread-8] [timeMillis: 1500645236913] [levelValue: 800] [[
+  1]]
+
+[2017-07-21T15:53:56.919+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=105 _ThreadName=Thread-8] [timeMillis: 1500645236919] [levelValue: 800] [[
+  Created Device successfully]]
+
+[2017-07-21T15:53:56.926+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=105 _ThreadName=Thread-8] [timeMillis: 1500645236926] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:54:07.480+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645247480] [levelValue: 800] [[
+  2]]
+
+[2017-07-21T15:54:07.485+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645247485] [levelValue: 800] [[
+  Created Device successfully]]
+
+[2017-07-21T15:54:07.497+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645247497] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:54:16.865+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=107 _ThreadName=Thread-8] [timeMillis: 1500645256865] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:54:20.097+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645260097] [levelValue: 800] [[
+  1]]
+
+[2017-07-21T15:54:20.104+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645260104] [levelValue: 800] [[
+  Created Device successfully]]
+
+[2017-07-21T15:54:20.112+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=109 _ThreadName=Thread-8] [timeMillis: 1500645260112] [levelValue: 800] [[
+  Updated Customer successfully]]
+
+[2017-07-21T15:54:43.063+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283063] [levelValue: 800] [[
+  hey:1]]
+
+[2017-07-21T15:54:43.063+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283063] [levelValue: 800] [[
+  hey:1]]
+
+[2017-07-21T15:54:43.063+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283063] [levelValue: 800] [[
+  hey:1]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:004/0001 Kaltgeräteleitung]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:NT Laptop]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.064+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283064] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.065+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283065] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.065+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283065] [levelValue: 800] [[
+  hey:Secutest Messung]]
+
+[2017-07-21T15:54:43.065+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283065] [levelValue: 800] [[
+  hey:17.02.2017 18:58:31]]
+
+[2017-07-21T15:54:43.065+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283065] [levelValue: 800] [[
+  hey:300 MO]]
+
+[2017-07-21T15:54:43.065+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283065] [levelValue: 800] [[
+  hey:=1,00 MO]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:512 V]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:0,1 mA]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.066+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283066] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:245 mO]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:=300 mO]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:57 mV]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:232 mA]]
+
+[2017-07-21T15:54:43.067+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283067] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:Bestanden]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:null]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.068+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283068] [levelValue: 800] [[
+  hey:2]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:2]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:1]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:004/0002 Netzteil]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:Laptop]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:HP]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.069+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283069] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.070+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283070] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:Secutest Messung]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:17.02.2017 19:04:57]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:300 MO]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:=2,00 MO]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:Bestanden]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:512 V]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:0,1 mA]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:2 µA]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:=500 µA]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:229,9 V]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:50,0 Hz50,0 Hz]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:1 W]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:4 VA]]
+
+[2017-07-21T15:54:43.071+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283071] [levelValue: 800] [[
+  hey:1,00]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:0,02 A]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:234,7 V]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:null]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:54:43.072+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=106 _ThreadName=Thread-8] [timeMillis: 1500645283072] [levelValue: 800] [[
+  hey:]]
+
+[2017-07-21T15:56:21.099+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381099] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T15:56:21.282+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381282] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:56:21.463+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381463] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:56:21.498+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381498] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:56:21.500+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381500] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:56:21.501+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381501] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:56:21.689+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381689] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:56:21.775+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645381775] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 718 milliseconds.]]
+
+[2017-07-21T15:58:01.372+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481372] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T15:58:01.569+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481569] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:01.750+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481750] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:01.797+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481797] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:01.798+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481798] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:01.802+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645481802] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:02.082+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645482082] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:58:02.101+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645482101] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 779 milliseconds.]]
+
+[2017-07-21T15:58:13.518+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=199 _ThreadName=Thread-35] [timeMillis: 1500645493518] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2017-07-21T15:58:13.522+0200] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=199 _ThreadName=Thread-35] [timeMillis: 1500645493522] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@f339eae from service registry.]]
+
+[2017-07-21T15:58:13.524+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=199 _ThreadName=Thread-8] [timeMillis: 1500645493524] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2017-07-21T15:58:13.530+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=199 _ThreadName=Thread-35] [timeMillis: 1500645493530] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2017-07-21T15:58:13.531+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=199 _ThreadName=Thread-35] [timeMillis: 1500645493531] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2017-07-21T15:58:13.633+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=205 _ThreadName=Thread-8] [timeMillis: 1500645493633] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+
+[2017-07-21T15:58:25.889+0200] [glassfish 4.1] [INFO] [NCLS-LOGGING-00009] [javax.enterprise.logging] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500645505702] [timeMillis: 1500645505889] [levelValue: 800] [[
+  Running GlassFish Version: GlassFish Server Open Source Edition  4.1.1  (build 1)]]
+
+[2017-07-21T15:58:25.891+0200] [glassfish 4.1] [INFO] [NCLS-LOGGING-00010] [javax.enterprise.logging] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500645505702] [timeMillis: 1500645505891] [levelValue: 800] [[
+  Server log file is using Formatter class: com.sun.enterprise.server.logging.ODLLogFormatter]]
+
+[2017-07-21T15:58:26.001+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506001] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2017-07-21T15:58:26.004+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506004] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2017-07-21T15:58:26.012+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506012] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2017-07-21T15:58:26.176+0200] [glassfish 4.1] [INFO] [SEC-SVCS-00100] [javax.enterprise.security.services] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500645505702] [timeMillis: 1500645506176] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2017-07-21T15:58:26.343+0200] [glassfish 4.1] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=19 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506343] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2017-07-21T15:58:26.405+0200] [glassfish 4.1] [INFO] [jts.startup_msg] [javax.enterprise.system.core.transaction.com.sun.jts.CosTransactions] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645506405] [levelValue: 800] [[
+  JTS5014: Recoverable JTS instance, serverId = [100]]]
+
+[2017-07-21T15:58:26.418+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506418] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-1, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:58:26.509+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506509] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 40ms - bound to [/0.0.0.0:8080]]]
+
+[2017-07-21T15:58:26.556+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506556] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-2, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:58:26.565+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506565] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 6ms - bound to [/0.0.0.0:8181]]]
+
+[2017-07-21T15:58:26.569+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506569] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=admin-listener, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:58:26.582+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506582] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 8ms - bound to [/0.0.0.0:4848]]]
+
+[2017-07-21T15:58:26.623+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=19 _ThreadName=RunLevelControllerThread-1500645505712] [timeMillis: 1500645506623] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 2ms - bound to [/0.0.0.0:3700]]]
+
+[2017-07-21T15:58:26.788+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645506788] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:27.155+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507155] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2017-07-21T15:58:27.156+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507156] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2017-07-21T15:58:27.161+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507161] [levelValue: 800] [[
+  Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.]]
+
+[2017-07-21T15:58:27.196+0200] [glassfish 4.1] [INFO] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507196] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2017-07-21T15:58:27.434+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507434] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2017-07-21T15:58:27.442+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507442] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2017-07-21T15:58:27.447+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507447] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2017-07-21T15:58:27.476+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507476] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2017-07-21T15:58:27.479+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507479] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2017-07-21T15:58:27.691+0200] [glassfish 4.1] [INFO] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507691] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2017-07-21T15:58:27.692+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645507692] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2017-07-21T15:58:28.303+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508303] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:28.423+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508423] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:28.424+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508424] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:28.425+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508425] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:58:28.540+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508540] [levelValue: 900] [[
+  The web application [unknown] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T15:58:28.675+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508675] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:58:28.682+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00022] [javax.enterprise.system.core] [tid: _ThreadID=17 _ThreadName=RunLevelControllerThread-1500645505700] [timeMillis: 1500645508682] [levelValue: 800] [[
+  Loading application ContentMangementSystem done in 2.352 ms]]
+
+[2017-07-21T15:58:28.690+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1500645508690] [levelValue: 800] [[
+  GlassFish Server Open Source Edition  4.1.1  (1) startup time : Felix (6.655ms), startup services(2.998ms), total(9.653ms)]]
+
+[2017-07-21T15:58:28.790+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=18 _ThreadName=RunLevelControllerThread-1500645505702] [timeMillis: 1500645508790] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 2ms - bound to [/0.0.0.0:7676]]]
+
+[2017-07-21T15:58:28.883+0200] [glassfish 4.1] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645508883] [levelValue: 800] [[
+  HV000001: Hibernate Validator 5.1.2.Final]]
+
+[2017-07-21T15:58:28.939+0200] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00027] [javax.enterprise.bootstrap] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1500645508939] [levelValue: 800] [[
+  Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@f339eae as OSGi service registration: org.apache.felix.framework.ServiceRegistrationImpl@ae7950d.]]
+
+[2017-07-21T15:58:28.999+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=15 _ThreadName=Thread-8] [timeMillis: 1500645508999] [levelValue: 800] [[
+  C:\Users\Jonas\Desktop\Code\cms\ContentManagementSystem\server\glassfish\domains\domain1\autodeploy\bundles does not exist, please create it.]]
+
+[2017-07-21T15:58:29.245+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=108 _ThreadName=pool-42-thread-1] [timeMillis: 1500645509245] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-2, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:58:29.256+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=108 _ThreadName=pool-42-thread-1] [timeMillis: 1500645509256] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2017-07-21T15:58:29.282+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=108 _ThreadName=pool-42-thread-1] [timeMillis: 1500645509282] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 3ms - bound to [/0.0.0.0:8181]]]
+
+[2017-07-21T15:58:29.419+0200] [glassfish 4.1] [WARNING] [] [org.glassfish.grizzly.config.Utils] [tid: _ThreadID=107 _ThreadName=pool-39-thread-1] [timeMillis: 1500645509419] [levelValue: 900] [[
+  Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener-1, realClassName=org.glassfish.grizzly.http2.Http2AddOn]]
+
+[2017-07-21T15:58:29.423+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=107 _ThreadName=pool-39-thread-1] [timeMillis: 1500645509423] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2017-07-21T15:58:29.446+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=107 _ThreadName=pool-39-thread-1] [timeMillis: 1500645509446] [levelValue: 800] [[
+  Grizzly Framework 2.3.23 started in: 2ms - bound to [/0.0.0.0:8080]]]
+
+[2017-07-21T15:58:33.516+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00005] [javax.enterprise.system.jmx] [tid: _ThreadID=90 _ThreadName=Thread-19] [timeMillis: 1500645513516] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://Jonas-Win10:8686/jndi/rmi://Jonas-Win10:8686/jmxrmi]]
+
+[2017-07-21T15:59:15.085+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555085] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T15:59:15.362+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555362] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:59:15.512+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555512] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:59:15.556+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555556] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:59:15.558+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555558] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:59:15.571+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555571] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T15:59:15.726+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555726] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T15:59:15.769+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500645555769] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 1.264 milliseconds.]]
+
+[2017-07-21T16:00:07.492+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607492] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:00:07.643+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607643] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:00:07.791+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607791] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:00:07.826+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607826] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:00:07.827+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607827] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:00:07.828+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607828] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:00:07.966+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607966] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:00:07.988+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500645607988] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 529 milliseconds.]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.501+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616501] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.502+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616502] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.503+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616503] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:00:16.504+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616504] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.504+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616504] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.504+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616504] [levelValue: 800] [[
+  true]]
+
+[2017-07-21T16:00:16.504+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500645616504] [levelValue: 800] [[
+  false]]
+
+[2017-07-21T16:01:27.620+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687620] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:01:27.736+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687736] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:01:27.884+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687884] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:01:27.914+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687914] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:01:27.916+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687916] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:01:27.918+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645687918] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:01:28.064+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645688064] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:01:28.082+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500645688082] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 498 milliseconds.]]
+
+[2017-07-21T16:02:39.871+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645759871] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:02:40.013+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760013] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:02:40.151+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760151] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:02:40.195+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760195] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:02:40.196+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760196] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:02:40.197+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760197] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:02:40.355+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760355] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:02:40.385+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500645760385] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 548 milliseconds.]]
+
+[2017-07-21T16:02:45.408+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500645765408] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:02:45.410+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500645765410] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:03:38.539+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818539] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:03:38.717+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818717] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:03:38.855+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818855] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:03:38.897+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818897] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:03:38.899+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818899] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:03:38.901+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645818901] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:03:39.016+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645819016] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:03:39.042+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500645819042] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 545 milliseconds.]]
+
+[2017-07-21T16:03:50.802+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500645830802] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:03:50.802+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500645830802] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:16:01.353+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561353] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:16:01.476+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561476] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:16:01.566+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561566] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:16:01.610+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561610] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:16:01.612+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561612] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:16:01.613+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561613] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:16:01.756+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561756] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:16:01.790+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500646561790] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 469 milliseconds.]]
+
+[2017-07-21T16:16:06.890+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500646566890] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:16:06.891+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500646566891] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:16:06.893+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500646566893] [levelValue: 800] [[
+  Document is used by other application!]]
+
+[2017-07-21T16:16:49.424+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500646609424] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:16:49.425+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500646609425] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:18:28.613+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708613] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:18:28.755+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708755] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:18:28.858+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708858] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:18:28.907+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708907] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:18:28.908+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708908] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:18:28.909+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646708909] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:18:29.086+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646709086] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:18:29.113+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646709113] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 532 milliseconds.]]
+
+[2017-07-21T16:18:34.345+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500646714345] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:18:34.346+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500646714346] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:19:28.269+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768269] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:19:28.392+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768392] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:19:28.505+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768505] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:19:28.577+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768577] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:19:28.577+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768577] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:19:28.579+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768579] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:19:28.704+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768704] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:19:28.742+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500646768742] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 496 milliseconds.]]
+
+[2017-07-21T16:19:44.094+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500646784094] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:19:44.095+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500646784095] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:19:44.097+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500646784097] [levelValue: 800] [[
+  Document is used by other application!]]
+
+[2017-07-21T16:19:53.902+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500646793902] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:19:53.910+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500646793910] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:25:54.535+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154535] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:25:54.652+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154652] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:25:54.722+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154722] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:25:54.751+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154751] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:25:54.751+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154751] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:25:54.752+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154752] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:25:54.855+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154855] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:25:54.875+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647154875] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 377 milliseconds.]]
+
+[2017-07-21T16:26:06.417+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647166417] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:26:06.418+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647166418] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:26:06.420+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647166420] [levelValue: 800] [[
+  Document is used by other application!]]
+
+[2017-07-21T16:26:14.463+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500647174463] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:26:14.464+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500647174464] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:26:41.557+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201557] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:26:41.628+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201628] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:26:41.716+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201716] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:26:41.751+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201751] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:26:41.752+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201752] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:26:41.752+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201752] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:26:41.892+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201892] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:26:41.928+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647201928] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 384 milliseconds.]]
+
+[2017-07-21T16:26:49.797+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647209797] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:26:49.798+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647209798] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:28:28.063+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308063] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:28:28.166+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308166] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:28.234+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308234] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:28.261+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308261] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:28.262+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308262] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:28.263+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308263] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:28.349+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308349] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:28:28.364+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647308364] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 318 milliseconds.]]
+
+[2017-07-21T16:28:39.795+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647319795] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:28:39.796+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647319796] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:28:58.993+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647338993] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:28:59.056+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339056] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:59.112+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339112] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:59.137+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339137] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:59.138+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339138] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:59.139+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339139] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:28:59.228+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339228] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:28:59.242+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647339242] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 275 milliseconds.]]
+
+[2017-07-21T16:29:07.410+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647347410] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:29:07.411+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647347411] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:29:34.919+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647374919] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:29:34.997+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647374997] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:29:35.060+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375060] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:29:35.104+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375104] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:29:35.105+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375105] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:29:35.106+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375106] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:29:35.214+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375214] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:29:35.231+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647375231] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 343 milliseconds.]]
+
+[2017-07-21T16:29:44.229+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647384229] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:29:44.230+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647384230] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:30:05.192+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405192] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:30:05.277+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405277] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:30:05.352+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405352] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:30:05.376+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405376] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:30:05.377+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405377] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:30:05.377+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405377] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:30:05.458+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405458] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:30:05.472+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500647405472] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 306 milliseconds.]]
+
+[2017-07-21T16:30:09.936+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647409936] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:30:09.937+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647409937] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:31:23.556+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483556] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:31:23.622+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483622] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:31:23.675+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483675] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:31:23.703+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483703] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:31:23.704+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483704] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:31:23.705+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483705] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:31:23.795+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483795] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:31:23.810+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500647483810] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 275 milliseconds.]]
+
+[2017-07-21T16:31:34.161+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500647494161] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:31:34.162+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500647494162] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:32:06.030+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526030] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:32:06.110+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526110] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:06.171+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526171] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:06.191+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526191] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:06.191+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526191] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:06.192+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526192] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:06.283+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526283] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:32:06.300+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647526300] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 302 milliseconds.]]
+
+[2017-07-21T16:32:11.701+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500647531701] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:32:11.702+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500647531702] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:32:39.107+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559107] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:32:39.185+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559185] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:39.246+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559246] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:39.270+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559270] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:39.271+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559271] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:39.271+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559271] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:32:39.371+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559371] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:32:39.392+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647559392] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 312 milliseconds.]]
+
+[2017-07-21T16:32:44.716+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647564716] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:32:44.717+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500647564717] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:33:38.250+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618250] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:33:38.324+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618324] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:33:38.403+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618403] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:33:38.456+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618456] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:33:38.458+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618458] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:33:38.468+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618468] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:33:38.639+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618639] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:33:38.656+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500647618656] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 420 milliseconds.]]
+
+[2017-07-21T16:33:49.084+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647629084] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:33:49.085+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500647629085] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:34:12.135+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652135] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:34:12.206+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652206] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:34:12.261+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652261] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:34:12.280+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652280] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:34:12.281+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652281] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:34:12.281+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652281] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:34:12.350+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652350] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:34:12.365+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647652365] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 256 milliseconds.]]
+
+[2017-07-21T16:34:19.822+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647659822] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:34:19.823+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647659823] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:35:47.043+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747043] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:35:47.119+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747119] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:35:47.169+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747169] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:35:47.195+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747195] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:35:47.196+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747196] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:35:47.197+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747197] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:35:47.277+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747277] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:35:47.295+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500647747295] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 286 milliseconds.]]
+
+[2017-07-21T16:36:03.644+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647763644] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:36:03.645+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=121 _ThreadName=Thread-8] [timeMillis: 1500647763645] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:37:41.266+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861266] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:37:41.329+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861329] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:37:41.381+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861381] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:37:41.402+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861402] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:37:41.402+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861402] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:37:41.403+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861403] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:37:41.469+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861469] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:37:41.478+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500647861478] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 234 milliseconds.]]
+
+[2017-07-21T16:37:56.718+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500647876718] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:37:56.720+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=124 _ThreadName=Thread-8] [timeMillis: 1500647876720] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:42:31.128+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151128] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:42:31.194+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151194] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:42:31.251+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151251] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:42:31.278+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151278] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:42:31.279+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151279] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:42:31.280+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151280] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:42:31.345+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151345] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:42:31.354+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=43 _ThreadName=admin-listener(1)] [timeMillis: 1500648151354] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 251 milliseconds.]]
+
+[2017-07-21T16:44:26.056+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266056] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:44:26.126+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266126] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:44:26.201+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266201] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:44:26.230+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266230] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:44:26.230+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266230] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:44:26.232+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266232] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:44:26.312+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266312] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:44:26.328+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648266328] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 296 milliseconds.]]
+
+[2017-07-21T16:45:50.292+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350292] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:45:50.361+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350361] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:45:50.409+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350409] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:45:50.427+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350427] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:45:50.427+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350427] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:45:50.427+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350427] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:45:50.508+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350508] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:45:50.523+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(4)] [timeMillis: 1500648350523] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 258 milliseconds.]]
+
+[2017-07-21T16:45:56.398+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500648356398] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:45:56.399+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=125 _ThreadName=Thread-8] [timeMillis: 1500648356399] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:48:34.759+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514759] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:48:34.829+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514829] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:48:34.879+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514879] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:48:34.896+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514896] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:48:34.897+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514897] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:48:34.897+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514897] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:48:34.965+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514965] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:48:34.980+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=45 _ThreadName=admin-listener(3)] [timeMillis: 1500648514980] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 247 milliseconds.]]
+
+[2017-07-21T16:48:48.511+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500648528511] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:48:48.513+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=123 _ThreadName=Thread-8] [timeMillis: 1500648528513] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:49:17.277+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557277] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:49:17.338+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557338] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:17.381+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557381] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:17.401+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557401] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:17.402+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557402] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:17.403+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557403] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:17.492+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557492] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:49:17.519+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=44 _ThreadName=admin-listener(2)] [timeMillis: 1500648557519] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 268 milliseconds.]]
+
+[2017-07-21T16:49:23.453+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500648563453] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:49:23.454+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500648563454] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:49:49.419+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589419] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:49:49.514+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589514] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:49.586+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589586] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:49.604+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589604] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:49.605+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589605] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:49.605+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589605] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2017-07-21T16:49:49.668+0200] [glassfish 4.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589668] [levelValue: 800] [[
+  Loading application [ContentMangementSystem] at [/ContentManagementSystem]]]
+
+[2017-07-21T16:49:49.683+0200] [glassfish 4.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(5)] [timeMillis: 1500648589683] [levelValue: 800] [[
+  ContentMangementSystem was successfully deployed in 292 milliseconds.]]
+
+[2017-07-21T16:49:54.308+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500648594308] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:49:54.310+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=122 _ThreadName=Thread-8] [timeMillis: 1500648594310] [levelValue: 800] [[
+  Yo]]
+
+[2017-07-21T16:52:36.286+0200] [glassfish 4.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=474 _ThreadName=Thread-38] [timeMillis: 1500648756286] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2017-07-21T16:52:36.293+0200] [glassfish 4.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=474 _ThreadName=Thread-38] [timeMillis: 1500648756293] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@f339eae from service registry.]]
+
+[2017-07-21T16:52:36.294+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=474 _ThreadName=Thread-8] [timeMillis: 1500648756294] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2017-07-21T16:52:36.300+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=474 _ThreadName=Thread-38] [timeMillis: 1500648756300] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2017-07-21T16:52:36.301+0200] [glassfish 4.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=474 _ThreadName=Thread-38] [timeMillis: 1500648756301] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2017-07-21T16:52:36.332+0200] [glassfish 4.1] [WARNING] [] [javax.enterprise.web.util] [tid: _ThreadID=478 _ThreadName=RunLevelControllerThread-1500648756315] [timeMillis: 1500648756332] [levelValue: 900] [[
+  The web application [/ContentManagementSystem] registered the JDBC driver [org.sqlite.JDBC] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.]]
+
+[2017-07-21T16:52:36.386+0200] [glassfish 4.1] [INFO] [] [] [tid: _ThreadID=480 _ThreadName=Thread-8] [timeMillis: 1500648756386] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+

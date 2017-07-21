@@ -19,6 +19,7 @@ import com.qoppa.pdfWriter.PDFPage;
 import com.sun.xml.rpc.processor.generator.CustomClassGenerator;
 import java.awt.Graphics2D;
 import java.awt.print.PageFormat;
+import java.awt.print.Paper;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -59,23 +60,37 @@ public class PrintServlet extends HttpServlet {
                 cn = DriverManager.getConnection("jdbc:sqlite:../../../../../cms.db");
                 st = cn.createStatement();
 
-                rs = st.executeQuery("SELECT messergebnis.*, geraet.bezeichnung as 'gerätebezeichnung' FROM messergebnis INNER JOIN geraet ON messergebnis.geraeteID=geraet.geraeteID WHERE messergebnis.kundenID =" + currentCustomer.getId() + ";");
+                rs = st.executeQuery("SELECT messergebnis.*, geraet.bezeichnung as 'gerätebezeichnung', geraet.kunde, geraet.gebaeude, geraet.etage, geraet.raum FROM messergebnis INNER JOIN geraet ON messergebnis.geraeteID=geraet.geraeteID WHERE messergebnis.kundenID =" + currentCustomer.getId() + ";");
 
                 while (rs.next()) {
-                    PDFPage newPage = pdfDoc.createPage(new PageFormat());
+                    double cm = 72 / 2.54;
+                    
+                    PageFormat pf = new PageFormat();
+                    Paper p = new Paper();
+                    p.setSize(21*cm, 29.5*cm);
+                    double margin = 2*cm;
+                    p.setImageableArea(margin, margin, p.getWidth() - margin * 2, p.getHeight()- margin * 2);
+                    pf.setPaper(p);
+                    
+                    PDFPage newPage = pdfDoc.createPage(pf);
                     Graphics2D g2d = newPage.createGraphics();
-                    g2d.setFont(PDFGraphics.HELVETICA.deriveFont(50f));
-                    g2d.drawString(rs.getString("gerätebezeichnung"), 100, 100);
+                    g2d.setFont(PDFGraphics.HELVETICA.deriveFont(9f));
+                    g2d.drawString("Gerätebezeichnung:", 75, 70);
+                    g2d.setFont(PDFGraphics.HELVETICA.deriveFont(25f));
+                    g2d.drawString(rs.getString("gerätebezeichnung"), 75, 90);
                     g2d.setFont(PDFGraphics.HELVETICA.deriveFont(9f));
                     
-                    for(int i = 1; i <= rs.getMetaData().getColumnCount()-1; i++){
-                        
-                            g2d.drawString(rs.getMetaData().getColumnName(i)+": "+rs.getString(i), 100,120+i*12);
-                        
-                        
+                    for(int i = 1; i <= rs.getMetaData().getColumnCount()-5; i++){
+                        g2d.drawString(rs.getMetaData().getColumnName(i)+": "+rs.getString(i), 75,100+i*12);
                     }
                     
-                   pdfDoc.addPage(newPage);    
+                    g2d.drawString("Kunde: "+ rs.getString("kunde"), 400, 70);
+                    g2d.drawString("Gebäude: "+ rs.getString("gebaeude"), 400, 70 + 12);
+                    g2d.drawString("Etage: "+ rs.getString("etage"), 400, 70 + 12*2);
+                    g2d.drawString("Raum: "+ rs.getString("raum"), 400, 70 + 12*3);
+                    
+                    
+                    pdfDoc.addPage(newPage);    
                 }
 
                 rs.close();
