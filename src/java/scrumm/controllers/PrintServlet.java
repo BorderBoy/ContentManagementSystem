@@ -62,6 +62,8 @@ public class PrintServlet extends HttpServlet {
 
                 rs = st.executeQuery("SELECT messergebnis.*, geraet.bezeichnung as 'gerätebezeichnung', geraet.kunde, geraet.gebaeude, geraet.etage, geraet.raum FROM messergebnis INNER JOIN geraet ON messergebnis.geraeteID=geraet.geraeteID WHERE messergebnis.kundenID =" + currentCustomer.getId() + ";");
 
+                
+                
                 while (rs.next()) {
                     double cm = 72 / 2.54;
                     
@@ -80,14 +82,22 @@ public class PrintServlet extends HttpServlet {
                     g2d.drawString(rs.getString("gerätebezeichnung"), 75, 90);
                     g2d.setFont(PDFGraphics.HELVETICA.deriveFont(9f));
                     
+                    int counter = 1;
+                    
                     for(int i = 1; i <= rs.getMetaData().getColumnCount()-5; i++){
-                        g2d.drawString(rs.getMetaData().getColumnName(i)+": "+rs.getString(i), 75,100+i*12);
+                        if((rs.getString(i) != null)&&(rs.getString(i).equals("") == false)){
+                            g2d.drawString(rs.getMetaData().getColumnName(i)+": "+rs.getString(i), 75,100+counter*12);
+                            counter++;
+                        }
                     }
+                    
+                    System.out.println("page");
                     
                     g2d.drawString("Kunde: "+ rs.getString("kunde"), 400, 70);
                     g2d.drawString("Gebäude: "+ rs.getString("gebaeude"), 400, 70 + 12);
                     g2d.drawString("Etage: "+ rs.getString("etage"), 400, 70 + 12*2);
                     g2d.drawString("Raum: "+ rs.getString("raum"), 400, 70 + 12*3);
+                    
                     
                     
                     pdfDoc.addPage(newPage);    
@@ -103,12 +113,16 @@ public class PrintServlet extends HttpServlet {
         
         try {
             pdfDoc.saveDocument("../../../../../output.pdf");
+            
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayCustomer.jsp");  
+            dispatcher.forward(request, response);
         } catch(IOException e){
             System.out.println("Document is used by other application!");
+            response.sendError(HttpServletResponse.SC_CONFLICT, "Document is used by other application!");
         }
         
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/displayCustomer.jsp");  
-        dispatcher.forward(request, response);
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -69,7 +69,7 @@ public class CreateCustomerServlet extends HttpServlet {
             } catch (NumberFormatException e) {
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/createCustomer.html");  
 
-               dispatcher.forward(request, response);
+                dispatcher.forward(request, response);
             }
     }
 

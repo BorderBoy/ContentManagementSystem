@@ -1,19 +1,19 @@
-/* AUTOMATICALLY GENERATED ON Fri Jul 21 16:49:49 CEST 2017*/
+/* AUTOMATICALLY GENERATED ON Sat Jul 22 22:46:35 CEST 2017*/
 /* DO NOT EDIT */
 
 grant {
-  permission javax.security.jacc.WebUserDataPermission "/";
   permission javax.security.jacc.WebResourcePermission "/";
+  permission javax.security.jacc.WebUserDataPermission "/";
 };
 
 grant      principal * * {
   permission javax.security.jacc.WebRoleRefPermission "", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenCustomerServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "ImportReadingsServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "PrintServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "ImportReadingsServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateRoomServlet", "**";
-  permission javax.security.jacc.WebRoleRefPermission "CreateFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "DeleteDeviceServlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "CreateFloorServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "CreateBulidingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "ChoosenBuildingServlet", "**";
   permission javax.security.jacc.WebRoleRefPermission "default", "**";

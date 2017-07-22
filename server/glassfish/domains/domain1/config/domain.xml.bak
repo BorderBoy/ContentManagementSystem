@@ -63,6 +63,7 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
+      <application-ref ref="ContentMangementSystem" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
       <resource-ref ref="jms/__defaultConnectionFactory"></resource-ref>
@@ -460,5 +461,16 @@
     <secure-admin-principal dn="CN=localhost-instance,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"></secure-admin-principal>
   </secure-admin>
   <clusters></clusters>
-  <applications></applications>
+  <applications>
+    <application context-root="/ContentManagementSystem" object-type="user" directory-deployed="true" name="ContentMangementSystem" location="file:/C:/Users/Jonas/Desktop/Code/cms/ContentManagementSystem/build/web/">
+      <property name="archiveType" value="war"></property>
+      <property name="appLocation" value="file:/C:/Users/Jonas/Desktop/Code/cms/ContentManagementSystem/build/web/"></property>
+      <property name="defaultAppName" value="web"></property>
+      <property name="keepSessions" value="true"></property>
+      <module name="ContentMangementSystem">
+        <engine sniffer="security"></engine>
+        <engine sniffer="web"></engine>
+      </module>
+    </application>
+  </applications>
 </domain>
